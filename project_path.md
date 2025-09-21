@@ -5,11 +5,35 @@
 ## **wget -qO-** [![alt text][1]](https://superuser.com/questions/321240/how-do-you-redirect-wget-response-to-standard-out)
 <!-- keep the format -->
 ## Execute Bash Script Directly From a URL [![alt text][1]](https://www.baeldung.com/linux/execute-bash-script-from-url)
-<!-- keep the format -->
+<!-- ktf -->
 - Most Linux distributions have wget installed by default
 <!-- ktf -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
-
+wget -qO - http://example.com/script.sh | bash
+```
+<!-- ktf -->
+## Path of script
+<!-- ktf -->
+<!-- markdownlint-disable MD034 -->
+https://raw.githubusercontent.com/MathiasStadler/rust_init_project/refs/heads/main/scripts/dummy.sh
+<!-- markdownlint-enable MD034 -->
+<!-- ktf -->
+## Execute path in folder tmp **WITHOUT** save the script itself
+<!-- ktf-->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cd && cd /tmp
+wget -qO - https://raw.githubusercontent.com/MathiasStadler/rust_init_project/refs/heads/main/scripts/dummy.sh | sh
+```
+<!-- ktf -->
+## Execute path in folder tmp **WITH** save the script itself
+<!-- ktf-->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cd && cd /tmp
+SCRIPT_URL="https://raw.githubusercontent.com/MathiasStadler/rust_init_project/refs/heads/main/scripts/dummy.sh"
+SCRIPT_NAME="$(basename $SCRIPT_URL)" && wget $SCRIPT_URL -O $SCRIPT_NAME && sh +x $SCRIPT_NAME
+# quiet - no wget output
+SCRIPT_URL="https://raw.githubusercontent.com/MathiasStadler/rust_init_project/refs/heads/main/scripts/dummy.sh"
+SCRIPT_NAME="$(basename $SCRIPT_URL)" && wget --quiet $SCRIPT_URL -O $SCRIPT_NAME && sh +x $SCRIPT_NAME
 ```
 
 ## Setup for user
