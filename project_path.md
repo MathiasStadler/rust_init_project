@@ -35,12 +35,33 @@ SCRIPT_NAME="$(basename $SCRIPT_URL)" && wget $SCRIPT_URL -O $SCRIPT_NAME && sh 
 SCRIPT_URL="https://raw.githubusercontent.com/MathiasStadler/rust_init_project/refs/heads/main/scripts/dummy.sh"
 SCRIPT_NAME="$(basename $SCRIPT_URL)" && wget --quiet $SCRIPT_URL -O $SCRIPT_NAME && sh +x $SCRIPT_NAME
 ```
-
+<!-- ktf-->
+## shellcheck - install debian
+<!-- ktf-->
+```bash <!-- markdownlint-disable-line code-block-style -->
+sudo apt install shellcheck
+```
+<!-- ktf-->
+## shellcheck - use on debian/bash
+<!-- ktf-->
+```bash <!-- markdownlint-disable-line code-block-style -->
+bash --version
+# GNU bash, version 5.2.37(1)-release (x86_64-pc-linux-gnu)
+shellcheck --version
+#ShellCheck - shell script analysis tool
+#version: 0.10.0
+```
+<!-- ktf-->
+## shellcheck - How to used it from your terminal
+<!-- ktf-->
+```bash <!-- markdownlint-disable-line code-block-style -->
+shellcheck scripts/dummy.sh
+```
+<!-- keep the format -->
 ## Setup for user
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 ```
-<!-- keep the format -->
 <!-- keep the format -->
 ## dummy code block
 <!-- keep the format -->
