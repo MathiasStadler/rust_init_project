@@ -1,0 +1,4 @@
+rustup-init https://github.com/rust-lang/rustup/blob/master/rustup-init.sh
+
+assert cmd
+
