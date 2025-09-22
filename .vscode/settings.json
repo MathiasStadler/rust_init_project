@@ -1,9 +1,24 @@
 {
     "cSpell.words": [
+        "abhängig",
+        "aktuellen",
+        "bestehende",
         "direnv",
+        "eine",
+        "entladen",
+        "erweitert",
+        "Erweiterung",
+        "Funktion",
+        "Ihre",
+        "kann",
+        "neue",
         "pinage",
         "rustup",
         "shellcheck",
-        "STRG"
-    ]
+        "STRG",
+        "Umgebungsvariablen",
+        "Verzeichnis"
+    ],
+    "code-runner.fileDirectoryAsCwd": true
 }
+

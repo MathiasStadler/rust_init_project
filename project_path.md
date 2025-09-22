@@ -68,6 +68,15 @@ shellcheck scripts/dummy.sh
 - https://packages.debian.org/trixie/direnv
 ```
 <!-- ktf -->
+## CsCode/VsCodium How to make Code Runner in VS Code recognize my current working directory? [![alt text][1]](https://stackoverflow.com/questions/62805327/how-to-make-code-runner-in-vs-code-recognize-my-current-working-directory)
+<!-- ktf -->
+- added these settings to settings.json
+
+```bash <!-- markdownlint-disable-line code-block-style -->
+"code-runner.fileDirectoryAsCwd": true
+```
+<!-- ktf -->
+<!-- ktf -->
 ## Setup for user
 <!-- ktf -->
 ```bash <!-- markdownlint-disable-line code-block-style -->

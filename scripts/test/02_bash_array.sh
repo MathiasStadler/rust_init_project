@@ -2,11 +2,13 @@
 # shellcheck shell=bash
 # shellcheck disable=SC2039  # local is non-POSIX
 
-arr=("first" "second" "third" "four" "five")
+arr=("first"
+"second"
+"third"
+"four"
+"five"
+)
 
 for item in "${arr[@]}"; do
     echo "$item"
 done
-
-
-echo arr;
