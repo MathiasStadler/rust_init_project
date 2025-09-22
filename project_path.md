@@ -58,11 +58,21 @@ shellcheck --version
 shellcheck scripts/dummy.sh
 ```
 <!-- keep the format -->
+
+## vscode/vscodium used extension
+<!-- ktf -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+- pinage404.bash-extension-pack
+
+-- direnv must install local
+- https://packages.debian.org/trixie/direnv
+```
+<!-- ktf -->
 ## Setup for user
-<!-- keep the format -->
+<!-- ktf -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 ```
-<!-- keep the format -->
+<!-- ktf -->
 ## dummy code block
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
