@@ -2,3 +2,18 @@ rustup-init https://github.com/rust-lang/rustup/blob/master/rustup-init.sh
 
 assert cmd
 
+uname -a --all
+uname -s => Linux
+
+uname -n => debian
+
+uname -o GNU/Linux
+
+uname -n |grep debian
+echo $?
+
+# exit if not match
+uname -n |grep debian || exit
+
+https://www.linuxbash.sh/post/chaining-commands-with-logical-operators
+Chaining Commands with `&&`, `||`, and `;`
