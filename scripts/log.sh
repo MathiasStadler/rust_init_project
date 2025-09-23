@@ -17,4 +17,4 @@ function log() {
 log "[I] service start"
 log "[D] debug message"
 
-echo "Date => [$(date +"%Y/%m/%d:%H:%M:%S %z")]";
+# echo "Date => [$(date +"%Y/%m/%d:%H:%M:%S %z")]";

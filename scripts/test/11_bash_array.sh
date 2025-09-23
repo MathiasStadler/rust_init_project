@@ -1,7 +1,12 @@
-#! /bin/bash
+#!/bin/bash
 # shellcheck shell=bash
 
-#!/bin/bash
+set -o errexit  # Exit script on first error
+set -o pipefail # Use the first non-zero exit code (if any) of a 
+                # set of piped command as the exit code of the 
+                # full set of commands
+# set -o         # Show / list the status of shell option
+# set -o|grep [[:blank:]]on # Show all enable option
 
 # ------------- SCRIPT ------------- #
 
@@ -9,6 +14,19 @@
 
 echo
 # echo "# arguments called with ---->  ${@}     "
+if [ $# -eq 0 ]
+    then
+        echo "No arguments supplied"
+    else
+	    c=$(($#-1))
+        i=1
+        while [ $c -ge 0 ];
+            do
+                echo "$i-th Argument: ${BASH_ARGV[$c]}"
+                c=$((c-1))
+                i=$((i+1))
+            done
+fi
 echo "# \$1 ---------------------->  $1       "
 echo "# \$2 ---------------------->  $2       "
 echo "# path to me --------------->  ${0}     "
