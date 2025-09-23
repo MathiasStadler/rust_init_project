@@ -2,38 +2,42 @@
 # shellcheck shell=bash
 # shellcheck disable=SC2039  # local is non-POSIX
 
-# FOUND HERE
-# https://github.com/rust-lang/rustup/blob/master/rustup-init.sh
-# Run a command that should never fail. If the command fails execution
-# will immediately terminate with an error showing the failing
-# command.
-ensure() {
-    if ! "$@"; then
-        err "command failed: $*"
-        exit 1
-    fi
-}
-
-
-arr=$(cat <<EOF
-pwd
-EOF
+arr=(
+"#!/usr/bin/bash -euxo; "
+"# # list all option /w status;"
+"# grep all with space before the word on; "
+"set -o |grep '[[:space:]]on'; "
+"CURRENT_PATH=\$(/usr/bin/pwd); "
+"echo \$CURRENT_PATH; "
+"ls /home && echo \"found\"; "
+"# cargo init \$CURRENT_PATH; "
+"ls /garbage && echo \"found\"; "
+"ls -la \$CURRENT_PATH;"
 )
 
-# echo "$arr";
+init_command=(
+"touch README.md"
+"ln -s README.md README"
+"cargo init \"\${pwd}\""
+"cargo add rustfmt"
+"rustup component add rustfmt"
+"mkdir examples"
+"cp src/main.rs examples/example.rs"
+"sed -i -e 's/world/example/g' examples/example.rs"
+"rustup  show"
+"rustup  check"
+"rustup toolchain uninstall stable"
+"rustup toolchain install stable"
+"rustup update  --force"
+"rustup show"
+"mkdir tests"
 
+)
 
-for command in "${arr[@]}"; do
-     ensure "$command"
-done
+# for item in "${arr[@]}"; do
+#     echo "$item"
+# done 
 
-# sql=$(cat <<EOF
-# SELECT foo, bar FROM db
-# WHERE foo='baz'
-# EOF
-# )
-
-# echo "$sql"
-
-# focus/cursor inside windows
-# code runner [STRG] + [ALT] + [N]
+for item in "${init_command[@]}"; do
+    echo "$item"
+done 

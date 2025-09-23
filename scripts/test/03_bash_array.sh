@@ -2,26 +2,16 @@
 # shellcheck shell=bash
 # shellcheck disable=SC2039  # local is non-POSIX
 
-arr=$(cat <<EOF
-"first"
-"second"
-"third"
-"four"
-"five"
-EOF
+arr=(
+	"first f2 f3"
+	"second"
+	"third"
+	"four"
+	"five"
+	"pwd"
+	"ls"
 )
 
-# echo "$arr";
-
-
 for item in "${arr[@]}"; do
-     echo "$item"
+	echo "$item"
 done
-
-# sql=$(cat <<EOF
-# SELECT foo, bar FROM db
-# WHERE foo='baz'
-# EOF
-# )
-
-# echo "$sql"
