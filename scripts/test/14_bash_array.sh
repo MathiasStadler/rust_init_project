@@ -29,7 +29,7 @@ log "[I] script start"
 log "[D] debug message"
 
 log "[I] # script name ->  ${0##*/}"
-log "[I] # script path / system location  ->  ${0%/*}   "
+log "[I] # Executable Path Where the executable is install script path / system location  ->  ${0%/*}   "
 log "[I] # execute path of script -> $(/usr/bin/pwd)"
 
 if [ $# -eq 0 ]
