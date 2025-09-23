@@ -87,6 +87,12 @@ command_setup_init=(
 	"mkdir tests"
 )
 
+function handler_trap (){
+
+	echo "exit after trap"
+	exit 1;
+}
+
 function execute_list() {
 	log "[I]start execute_list"
 
@@ -98,6 +104,10 @@ function execute_list() {
 		log "[I] RUN COMMEND ${command_setup_init[n]}"
 
 		# $! vs $?
+
+		${command_setup_init[n]} || handler_trap
+		
+		# echo "COMMAND FAILED => EXIT" || exit 1
 
 		local LAST_RETURN_CODE=$?
 
