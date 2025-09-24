@@ -15,9 +15,9 @@ set -o pipefail # Use the first non-zero exit code (if any) of a
 set -o errtrace # Enable the err trap, code will get called when an error is detected
 trap 'echo ERROR: There was an error in \(function\) "${FUNCNAME-main context}" , details to follow' ERR
 
-# Test error - folder unavailable - to test the trap function
-# cd /tmp/unsense
- 
+# error- folder not available
+	cd /tmp/unsense
+
 # ------------- log ---------------- #
 # FROM HERE
 # https://stackoverflow.com/questions/14008125/shell-script-common-template
@@ -118,6 +118,22 @@ function execute_list() {
 		log "[I] RUN COMMEND ${command_setup_init[n]}"
 
 		# $! vs $?
+
+	# FROM HERE
+	# https://stackoverflow.com/questions/385408/get-program-execution-time-in-the-shell
+	# start=$(date +%s.%N); \
+  	# sleep 0.1s; \
+  	# dur=$(echo "$(date +%s.%N) - $start" | bc); \
+  	# printf "Execution time: %.6f seconds\n" $dur
+
+	# FROM  HERE
+	# https://stackoverflow.com/questions/385408/get-program-execution-time-in-the-shell
+	# 
+	# while true;do echo -n .;sleep 1;done &
+	# sleep 10 # or do something else here
+	# kill $!; trap 'kill $!' SIGTERM
+	# echo done
+
 
 		${command_setup_init[n]} || handler_trap
 		

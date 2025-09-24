@@ -18,6 +18,8 @@
         "strarr",
         "STRG",
         "Umgebungsvariablen",
+        "unsence",
+        "unsense",
         "Verzeichnis"
     ],
     "code-runner.fileDirectoryAsCwd": true
