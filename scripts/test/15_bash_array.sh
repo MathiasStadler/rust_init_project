@@ -8,6 +8,12 @@ set -o pipefail # Use the first non-zero exit code (if any) of a
 # set -o         # Show / list the status of shell option
 # set -o|grep [[:blank:]]on # Show all enable option
 
+# FROM HERE
+# https://www.redhat.com/en/blog/bash-error-handling
+
+
+
+ 
 # ------------Dependencies:......... #
 # NO DEPENDENCIES TO ANOTHER SCRIPTS, LIB or PROGRAM - bash how it is :-)
 
@@ -21,6 +27,9 @@ trap 'echo ERROR: There was an error in \(function\) "${FUNCNAME-main context}" 
 # ------------- log ---------------- #
 # FROM HERE
 # https://stackoverflow.com/questions/14008125/shell-script-common-template
+# SCRIPT_NAME=$(/usr/bin/basename $BASH_SOURCE)|| exit 100
+# FULL_PATH=$(/usr/bin/realpath ${BASH_SOURCE[0]})|| exit 100
+
 
 TAG="-"
 LOG_FILE="script.log"
@@ -38,6 +47,7 @@ function log() {
 # end function log
 
 # ------------- SCRIPT ------------- #
+function run () {
 log "[I] script start"
 log "[D] debug message"
 
@@ -100,6 +110,9 @@ command_setup_init=(
 	"rustup show"
 	"mkdir tests"
 )
+
+}
+#end of run
 
 function handler_trap (){
 
@@ -167,6 +180,8 @@ function execute_command_stack() {
 
 }
 
+
+running
 execute_command_stack
 
 log "[I] script finished !"
