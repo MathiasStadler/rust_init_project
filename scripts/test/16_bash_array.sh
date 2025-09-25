@@ -2,13 +2,11 @@
 # shellcheck shell=bash
 
 set -o errexit  # Exit script on first error
-set -o pipefail # Use the first non-zero exit code (if any) of a
-# set of piped command as the exit code of the
-# full set of commands
+set -o pipefail # Use the first non-zero exit code (if any) of a \ set of piped command as the exit code of the full set of commands
 # set -o         # Show / list the status of shell option
 # set -o|grep [[:blank:]]on # Show all enable option
 
-# FROM HERE
+# FOUND HERE
 # https://www.redhat.com/en/blog/bash-error-handling
 
 
@@ -21,8 +19,8 @@ set -o pipefail # Use the first non-zero exit code (if any) of a
 set -o errtrace # Enable the err trap, code will get called when an error is detected
 trap 'echo ERROR: There was an error in \(function\) "${FUNCNAME-main context}" , details to follow' ERR
 
-# error- folder not available
-	cd /tmp/unsense
+# Manual triggering of errors to test the trap function
+# cd /tmp/unsense
 
 # ------------- log ---------------- #
 # FROM HERE
@@ -55,27 +53,8 @@ log "[I] # script name ->  ${0##*/}"
 log "[I] # Executable Path Where the executable is install script path / system location  ->  ${0%/*}   "
 log "[I] # execute path of script -> $(/usr/bin/pwd)"
 
-if [ $# -eq 0 ]; then
-	echo "# No arguments supplied"
-else
-	c=$(($# - 1)) # number of arguments
-	i=1           # # iteration variable
-	while [ $c -ge 0 ]; do
-		# https://www.ego4u.de/de/cram-up/vocabulary/numbers/ordinal
-		if [[ $i -eq 1 ]]; then
-			log "[I] $i-st Command line argument: ${BASH_ARGV[$c]}"
-		elif [[ $i -eq 2 ]]; then
-			log "[I] $i-nd Command line argument: ${BASH_ARGV[$c]}"
-		elif [[ $i -eq 3 ]]; then
-			log "[I] $i-rd Command line argument: ${BASH_ARGV[$c]}"
-		else
-			log "[I] $i-th Command line argument: ${BASH_ARGV[$c]}"
-		fi
-
-		c=$((c - 1))
-		i=$((i + 1))
-	done
-fi
+# SCRIPT_NAME=$(/usr/bin/basename $BASH_SOURCE)|| exit 100
+# FULL_PATH=$(/usr/bin/realpath ${BASH_SOURCE[0]})|| exit 100
 
 # command=$(cat <<EOF
 # #!/usr/bin/bash -euxo; \
@@ -189,6 +168,8 @@ main
 log "[I] script finished !"
 
 
+stupid
 # code runner [STRG] + [ALT] + [N]
 
-# shfmt -w 15_bash_array.sh
+# shfmt -w 16_bash_array.sh
+shellcheck -a 16_bash_array.sh
