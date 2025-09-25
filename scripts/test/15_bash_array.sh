@@ -172,7 +172,7 @@ function bash_version() {
 }
 # end of bash_version
 
-function execute_command_stack() {
+function function_execute_command_stack() {
 
 	for item in "${command_setup_init[@]}"; do
 		echo "$item"
