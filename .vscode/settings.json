@@ -19,6 +19,7 @@
         "shellcheck",
         "strarr",
         "STRG",
+        "subshell",
         "trapapa",
         "Umgebungsvariablen",
         "unsence",
