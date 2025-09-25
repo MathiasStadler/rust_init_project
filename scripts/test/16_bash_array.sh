@@ -160,16 +160,13 @@ function function_execute_command_stack() {
 }
 
 
-#running
-#execute_command_stack
 
-main
+
 
 log "[I] script finished !"
 
 
-stupid
-# code runner [STRG] + [ALT] + [N]
 
+# code runner [STRG] + [ALT] + [N]
 # shfmt -w 16_bash_array.sh
 shellcheck -a 16_bash_array.sh

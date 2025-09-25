@@ -1,0 +1,100 @@
+[2025/09/25:14:22:36 +0200] [-] [I]start script
+[2025/09/25:14:22:36 +0200] [-] [I]start script - normally
+[2025/09/25:14:23:12 +0200] [-] [I] script start
+[2025/09/25:14:23:12 +0200] [-] [D] debug message
+[2025/09/25:14:23:12 +0200] [-] [I] # script name ->  14_bash_array.sh
+[2025/09/25:14:23:12 +0200] [-] [I] # Executable Path Where the executable is install script path / system location  ->  /home/trapapa/workspace_codium/rust_init_project/scripts/test   
+[2025/09/25:14:23:12 +0200] [-] [I] # execute path of script -> /var/trapapa_workspce_codium/rust_init_project/scripts/test
+[2025/09/25:14:23:12 +0200] [-] [I] script finished !
+[2025/09/25:15:04:28 +0200] [-] [I] script start
+[2025/09/25:15:04:28 +0200] [-] [D] debug message
+[2025/09/25:15:04:28 +0200] [-] [I] # script name ->  14_bash_array.sh
+[2025/09/25:15:04:28 +0200] [-] [I] # Executable Path Where the executable is install script path / system location  ->  /home/trapapa/workspace_codium/rust_init_project/scripts/test   
+[2025/09/25:15:04:28 +0200] [-] [I] # execute path of script -> /var/trapapa_workspce_codium/rust_init_project/scripts/test
+[2025/09/25:15:04:28 +0200] [-] [I] script finished !
+[2025/09/25:15:04:35 +0200] [-] [I]start script
+[2025/09/25:15:04:35 +0200] [-] [I]start script - normally
+[2025/09/25:15:04:51 +0200] [-] [I]start script
+[2025/09/25:15:04:51 +0200] [-] [I]end script - normally
+[2025/09/25:15:16:43 +0200] [-] [D] 1758806203684102
+[2025/09/25:15:16:43 +0200] [-] [I]start script
+[2025/09/25:15:16:43 +0200] [-] [I]end script - normally
+[2025/09/25:15:16:43 +0200] [-] [D] 1758806203690211
+[2025/09/25:15:26:59 +0200] [-] [D] REALTIME 1758806819440640
+[2025/09/25:15:26:59 +0200] [-] [D] REALTIME in second35056EPOCHSECONDS/[^0-9]/}
+[2025/09/25:15:26:59 +0200] [-] [I]start script
+[2025/09/25:15:26:59 +0200] [-] [I]end script - normally
+[2025/09/25:15:26:59 +0200] [-] [D] 1758806819447851
+[2025/09/25:15:26:59 +0200] [-] [D] REALTIME in second35056EPOCHSECONDS/[^0-9]/}
+[2025/09/25:15:27:30 +0200] [-] [D] REALTIME 1758806850479888
+[2025/09/25:15:27:30 +0200] [-] [D] REALTIME in second 1758806850/[^0-9]/}
+[2025/09/25:15:27:30 +0200] [-] [I]start script
+[2025/09/25:15:27:30 +0200] [-] [I]end script - normally
+[2025/09/25:15:27:30 +0200] [-] [D] 1758806850486834
+[2025/09/25:15:27:30 +0200] [-] [D] REALTIME in second 1758806850/[^0-9]/}
+[2025/09/25:15:29:25 +0200] [-] [D] REALTIME 1758806965540162
+[2025/09/25:15:29:25 +0200] [-] [D] REALTIME in second 1758806965
+[2025/09/25:15:29:25 +0200] [-] [I]start script
+[2025/09/25:15:29:25 +0200] [-] [I]end script - normally
+[2025/09/25:15:29:25 +0200] [-] [D] 1758806965547874
+[2025/09/25:15:29:25 +0200] [-] [D] REALTIME in second 1758806965
+[2025/09/25:15:33:59 +0200] [-] [D] REALTIME ERROR: There was an error in (function) main , details to follow
+[2025/09/25:15:33:59 +0200] [-] [D] REALTIME in second 1758807239
+[2025/09/25:15:33:59 +0200] [-] [I]start script
+[2025/09/25:15:33:59 +0200] [-] [I]end script - normally
+[2025/09/25:15:33:59 +0200] [-] [D] 1758807239764857
+[2025/09/25:15:33:59 +0200] [-] [D] REALTIME in second 1758807239
+[2025/09/25:15:35:18 +0200] [-] [D] REALTIME ERROR: There was an error in (function) main , details to follow
+[2025/09/25:15:35:18 +0200] [-] [D] REALTIME in second 1758807318
+[2025/09/25:15:35:18 +0200] [-] [I]start script
+[2025/09/25:15:35:18 +0200] [-] [I]end script - normally
+[2025/09/25:15:35:18 +0200] [-] [D] 1758807318193225
+[2025/09/25:15:35:18 +0200] [-] [D] REALTIME in second 1758807318
+[2025/09/25:15:35:30 +0200] [-] [D] REALTIME 
+[2025/09/25:15:35:30 +0200] [-] [D] REALTIME in second 1758807330
+[2025/09/25:15:35:30 +0200] [-] [I]start script
+[2025/09/25:15:35:30 +0200] [-] [I]end script - normally
+[2025/09/25:15:35:30 +0200] [-] [D] 1758807330671313
+[2025/09/25:15:35:30 +0200] [-] [D] REALTIME in second 1758807330
+[2025/09/25:15:35:49 +0200] [-] [D] REALTIME ERROR: There was an error in (function) main , details to follow
+[2025/09/25:15:35:49 +0200] [-] [D] REALTIME in second 1758807349
+[2025/09/25:15:35:49 +0200] [-] [I]start script
+[2025/09/25:15:35:49 +0200] [-] [I]end script - normally
+[2025/09/25:15:35:49 +0200] [-] [D] 1758807349792695
+[2025/09/25:15:35:49 +0200] [-] [D] REALTIME in second 1758807349
+[2025/09/25:15:39:32 +0200] [-] [D] REALTIME 52
+[2025/09/25:15:39:32 +0200] [-] [D] REALTIME in second 1758807572
+[2025/09/25:15:39:32 +0200] [-] [I]start script
+[2025/09/25:15:39:32 +0200] [-] [I]end script - normally
+[2025/09/25:15:39:32 +0200] [-] [D] 1758807572505302
+[2025/09/25:15:39:32 +0200] [-] [D] REALTIME in second 1758807572
+[2025/09/25:15:40:50 +0200] [-] [D] REALTIME ERROR: There was an error in (function) main:52 , details to follow
+[2025/09/25:15:40:50 +0200] [-] [D] REALTIME in second 1758807650
+[2025/09/25:15:40:50 +0200] [-] [I]start script
+[2025/09/25:15:40:50 +0200] [-] [I]end script - normally
+[2025/09/25:15:40:50 +0200] [-] [D] 1758807650213489
+[2025/09/25:15:40:50 +0200] [-] [D] REALTIME in second 1758807650
+[2025/09/25:15:41:12 +0200] [-] [D] REALTIME ERROR: There was an error in (function) main:53 , details to follow
+[2025/09/25:15:41:12 +0200] [-] [D] REALTIME in second 1758807672
+[2025/09/25:15:41:12 +0200] [-] [I]start script
+[2025/09/25:15:41:12 +0200] [-] [I]end script - normally
+[2025/09/25:15:41:12 +0200] [-] [D] 1758807672949299
+[2025/09/25:15:41:12 +0200] [-] [D] REALTIME in second 1758807672
+[2025/09/25:15:48:07 +0200] [-] [D] REALTIME Error occurred on line 74: return ${EPOCHREALTIME/[^0-9]/} (exit code: 39)
+[2025/09/25:15:48:07 +0200] [-] [D] REALTIME in second 1758808087
+[2025/09/25:15:48:07 +0200] [-] [I]start script
+[2025/09/25:15:48:07 +0200] [-] [I]end script - normally
+[2025/09/25:15:48:07 +0200] [-] [D] 1758808087841123
+[2025/09/25:15:48:07 +0200] [-] [D] REALTIME in second 1758808087
+[2025/09/25:15:49:22 +0200] [-] [D] REALTIME Error occurred on line 74: return ${EPOCHREALTIME/[^0-9]/} (exit code: 182)
+[2025/09/25:15:49:22 +0200] [-] [D] REALTIME in second 1758808162
+[2025/09/25:15:49:22 +0200] [-] [I]start script
+[2025/09/25:15:49:22 +0200] [-] [I]end script - normally
+[2025/09/25:15:49:22 +0200] [-] [D] 1758808162025819
+[2025/09/25:15:49:22 +0200] [-] [D] REALTIME in second 1758808162
+[2025/09/25:15:49:58 +0200] [-] [D] REALTIME Error occurred on line 74: return ${EPOCHREALTIME/[^0-9]/} (exit code: 4)
+[2025/09/25:15:49:58 +0200] [-] [D] REALTIME in second 1758808198
+[2025/09/25:15:49:58 +0200] [-] [I]start script
+[2025/09/25:15:49:58 +0200] [-] [I]end script - normally
+[2025/09/25:15:49:58 +0200] [-] [D] 1758808198332989
+[2025/09/25:15:49:58 +0200] [-] [D] REALTIME in second 1758808198

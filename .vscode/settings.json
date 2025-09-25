@@ -6,8 +6,10 @@
         "direnv",
         "eine",
         "entladen",
+        "EPOCHSECONDS",
         "erweitert",
         "Erweiterung",
+        "extdebug",
         "Funktion",
         "Ihre",
         "kann",
@@ -17,10 +19,12 @@
         "shellcheck",
         "strarr",
         "STRG",
+        "trapapa",
         "Umgebungsvariablen",
         "unsence",
         "unsense",
-        "Verzeichnis"
+        "Verzeichnis",
+        "workspce"
     ],
     "code-runner.fileDirectoryAsCwd": true
 }

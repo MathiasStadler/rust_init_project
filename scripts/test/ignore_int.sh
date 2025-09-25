@@ -6,5 +6,9 @@
 
 
 # trap 'echo SIGINT received and ignored!' INT#
-trap 'SIGINT received and ignored!' INT
-trap -p INT
+# trap 'SIGINT received and ignored!' INT
+
+trap 'echo "SIGINT received and ignored!"' EXIT
+trap -p EXIT
+
+
