@@ -46,15 +46,49 @@ trap "handle_error;exit 1" ERR
 # FULL_PATH=$(/usr/bin/realpath ${BASH_SOURCE[0]})|| exit 100
 
 # global variable for log
+# TAG="-"
+
 TAG="-"
+
 LOG_FILE="script.log"
 
+# # start log
+# function log() {
+
+# 	# FOUND HERE - https://stackoverflow.com/questions/17804007/how-to-show-line-number-when-executing-bash-script
+# 	echo "LINENO: ${LINENO}"
+#     # echo "BASH_LINENO: ${BASH_LINENO[*]}"
+
+# 	SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}" )"
+# 	# echo "script name => $SCRIPT_NAME";
+
+# 	if [ "$HIDE_LOG" ]; then
+# 		echo -e "[$TAG] $*" >>$LOG_FILE
+# 	else
+# 		# echo "[$(date +"%Y/%m/%d:%H:%M:%S %z")] [$SCRIPT_NAME][$TAG] $*" | tee -a $LOG_FILE
+# 		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME][$TAG] $*" | tee -a $LOG_FILE
+# 	fi
+# }
+# # end function log
+
+# start log
 function log() {
+
+	# arg1 = line number
+	# arg2 = message
+
+	# FOUND HERE - https://stackoverflow.com/questions/17804007/how-to-show-line-number-when-executing-bash-script
+	echo "LINENO: ${LINENO}"
+    # echo "BASH_LINENO: ${BASH_LINENO[*]}"
+
+	SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}" )"
+	# echo "script name => $SCRIPT_NAME";
 
 	if [ "$HIDE_LOG" ]; then
 		echo -e "[$TAG] $*" >>$LOG_FILE
 	else
-		echo "[$(date +"%Y/%m/%d:%H:%M:%S %z")] [$TAG] $*" | tee -a $LOG_FILE
+		# echo "[$(date +"%Y/%m/%d:%H:%M:%S %z")] [$SCRIPT_NAME][$TAG] $*" | tee -a $LOG_FILE
+		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$1] - $2" | tee -a $LOG_FILE
 	fi
 }
 # end function log
@@ -62,13 +96,12 @@ function log() {
 # FOUND HERE - https://linuxsimply.com/bash-scripting-tutorial/error-handling-and-debugging/error-handling/trap-err/
 function handle_error() {
 
-	
 	# Get information about the error
 	local error_code=$?
 	local error_line=${BASH_LINENO[0]}
 	local error_command=$BASH_COMMAND
 
-	echo "error handler";
+	echo "error handler"
 
 	# Log the error details
 	echo "Error occurred on line $error_line: $error_command (exit code: $error_code)"
@@ -89,31 +122,35 @@ function handle_error() {
 }
 
 function get_real_time() {
-	a="${EPOCHREALTIME/[^0-9]/}";
-	return "$a";
+	a="${EPOCHREALTIME/[^0-9]/}"
+	return "$a"
 }
 
 main() {
 
 	# echo $EPOCHSECONDS
-    log "[I]start script"
-	log "[D] REALTIME $(get_real_time)"
-	log "[D] REALTIME in second $EPOCHSECONDS"
-	
-	
-	log "[D] nano ${EPOCHREALTIME/[^0-9]/}"
-	log "[D] REALTIME in second $EPOCHSECONDS"
-	log "[I]end script - normally";
+	log "${LINENO}" "[I]start script"
+	log "${LINENO}" "[D] REALTIME $(get_real_time)"
+	log "${LINENO}" "[D] REALTIME in second $EPOCHSECONDS"
 
-	start=${EPOCHREALTIME/[^0-9]/};
-	log "[I]end script - normally ${start}";
-	echo "start $start"
+	log "${LINENO}" "[D] nano ${EPOCHREALTIME/[^0-9]/}"
+	log "${LINENO}" "[D] REALTIME in second $EPOCHSECONDS"
+	log "${LINENO}" "[I]end script - normally"
+
+	start=${EPOCHREALTIME/[^0-9]/}
+	log "${LINENO}" "[I]end script - normally ${start}"
 	
-	end=${EPOCHREALTIME/[^0-9]/};
+	# echo "${LINENO}" "start $start"
+
+	end=${EPOCHREALTIME/[^0-9]/}
 	echo "end $end"
 
-	local run_time=$((end-start))
-	log "[I]end script - normally ${run_time}";
+	local run_time=$((end - start))
+	log "${LINENO}" "[I]end script - normally ${run_time}"
+
+	# time_secs="$(${run_time}/1000| bc)";
+
+	# time in sec
 
 	#log "[I] real time => ","$(get_real_time)" ;
 }
