@@ -851,3 +851,50 @@ LINENO: 81
 [2025/09/26:21:11:50] [17_bash_array.sh:141] - [I]end script - normally 1758913910297122
 [2025/09/26:21:11:50] [17_bash_array.sh:149] - [I]end script - normally 3497
 [2025/09/26:21:11:50] [17_bash_array.sh:153] - result 0.35
+[2025/09/26:21:12:45] [20_bash_array.sh:132] - [I]start script
+[2025/09/26:21:12:45] [20_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:12:45] [20_bash_array.sh:133] - [D] REALTIME error handler
+Error occurred on line 133: return "$a" (exit code: 134)
+Hallo
+LINENO: 81
+[2025/09/26:21:12:45] [20_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:12:45] [20_bash_array.sh:134] - [D] REALTIME in second 1758913965
+[2025/09/26:21:12:45] [20_bash_array.sh:136] - [D] nano 1758913965873915
+[2025/09/26:21:12:45] [20_bash_array.sh:137] - [D] REALTIME in second 1758913965
+[2025/09/26:21:12:45] [20_bash_array.sh:138] - [I]end script - normally
+[2025/09/26:21:12:45] [20_bash_array.sh:141] - [I]end script - normally 1758913965884409
+[2025/09/26:21:12:45] [20_bash_array.sh:149] - [I]end script - normally 4135
+[2025/09/26:21:12:45] [20_bash_array.sh:153] - result 0.41
+[2025/09/26:21:13:21] [21_bash_array.sh:132] - [I]start script
+[2025/09/26:21:13:21] [21_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:13:21] [21_bash_array.sh:133] - [D] REALTIME error handler
+Error occurred on line 133: return "$a" (exit code: 27)
+Hallo
+LINENO: 81
+[2025/09/26:21:13:21] [21_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:13:21] [21_bash_array.sh:134] - [D] REALTIME in second 1758914001
+[2025/09/26:21:13:21] [21_bash_array.sh:136] - [D] nano 1758914001675532
+[2025/09/26:21:13:21] [21_bash_array.sh:137] - [D] REALTIME in second 1758914001
+[2025/09/26:21:13:21] [21_bash_array.sh:138] - [I]end script - normally
+[2025/09/26:21:13:21] [21_bash_array.sh:141] - [I]end script - normally 1758914001705565
+[2025/09/26:21:13:21] [21_bash_array.sh:149] - [I]end script - normally 14659
+[2025/09/26:21:13:21] [21_bash_array.sh:153] - result 1.47
+[2025/09/26:21:15:58] [21_bash_array.sh:102] - [I]start script
+[2025/09/26:21:15:58] [21_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:15:58] [21_bash_array.sh:103] - [D] REALTIME error handler
+Error occurred on line 103: return "$a" (exit code: 132)
+Hallo
+LINENO: 51
+BASH_LINENO: 103 103 133 0
+[2025/09/26:21:15:58] [21_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:15:58] [21_bash_array.sh:104] - [D] REALTIME in second 1758914158
+[2025/09/26:21:15:58] [21_bash_array.sh:106] - [D] nano 1758914158341868
+[2025/09/26:21:15:58] [21_bash_array.sh:107] - [D] REALTIME in second 1758914158
+[2025/09/26:21:15:58] [21_bash_array.sh:108] - [I]end script - normally
+[2025/09/26:21:15:58] [21_bash_array.sh:111] - [I]end script - normally 1758914158352656
+[2025/09/26:21:15:58] [21_bash_array.sh:119] - [I]end script - normally 3193
+[2025/09/26:21:15:58] [21_bash_array.sh:123] - result 0.32
+[2025/09/26:21:28:30] [21_bash_array.sh:96] - [I]start script - error handler
+Error occurred on line 96: return "$a" (exit code: 245)
+[2025/09/26:21:29:31] [21_bash_array.sh:91] - [I]start script - error handler
+Error occurred on line 91: return "$a" (exit code: 14)
