@@ -815,3 +815,39 @@ LINENO: 81
 [2025/09/26:21:03:25] [17_bash_array.sh:141] - [I]end script - normally 1758913405839972
 [2025/09/26:21:03:25] [17_bash_array.sh:149] - [I]end script - normally 4499
 [2025/09/26:21:03:25] [17_bash_array.sh:153] - result 0.45
+[2025/09/26:21:11:03] [19_bash_array.sh:111] - [I]start script
+[2025/09/26:21:11:03] [19_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:11:03] [19_bash_array.sh:112] - [D] REALTIME error handler
+Error occurred on line 112: return "$a" (exit code: 68)
+Hallo
+LINENO: 60
+[2025/09/26:21:11:03] [19_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:11:03] [19_bash_array.sh:113] - [D] REALTIME in second 1758913863
+[2025/09/26:21:11:03] [19_bash_array.sh:115] - [D] nano 1758913863510375
+[2025/09/26:21:11:03] [19_bash_array.sh:116] - [D] REALTIME in second 1758913863
+[2025/09/26:21:11:03] [19_bash_array.sh:117] - [I]end script - normally
+[2025/09/26:21:11:03] [19_bash_array.sh:120] - [I]end script - normally 1758913863520069
+[2025/09/26:21:11:03] [19_bash_array.sh:128] - [I]end script - normally 3409
+[2025/09/26:21:11:03] [19_bash_array.sh:133] - result 0.34
+[2025/09/26:21:11:30] [18_bash_array.sh:135] - [I]start script  1758913890174728
+[2025/09/26:21:11:30] [18_bash_array.sh:140] - [D] microsecond 1/1000000 second 	1758913890178583
+[2025/09/26:21:11:30] [18_bash_array.sh:141] - [D] millisecond 1/1000 second 		1758913890182
+[2025/09/26:21:11:30] [18_bash_array.sh:142] - [D] second 1/1000 second 		1758913890
+[2025/09/26:21:11:30] [18_bash_array.sh:143] - [D] second                               1758913890
+[2025/09/26:21:11:30] [18_bash_array.sh:144] - [I] end script - normally 1758913890174728
+[2025/09/26:21:11:30] [18_bash_array.sh:163] - [I]end script - normally 22755  1758913890174728 1758913890197483; # 0
+[2025/09/26:21:11:30] [18_bash_array.sh:165] - HALLO 
+[2025/09/26:21:11:50] [17_bash_array.sh:132] - [I]start script
+[2025/09/26:21:11:50] [17_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:11:50] [17_bash_array.sh:133] - [D] REALTIME error handler
+Error occurred on line 133: return "$a" (exit code: 247)
+Hallo
+LINENO: 81
+[2025/09/26:21:11:50] [17_bash_array.sh:[I] Kill  ] - 
+[2025/09/26:21:11:50] [17_bash_array.sh:134] - [D] REALTIME in second 1758913910
+[2025/09/26:21:11:50] [17_bash_array.sh:136] - [D] nano 1758913910283888
+[2025/09/26:21:11:50] [17_bash_array.sh:137] - [D] REALTIME in second 1758913910
+[2025/09/26:21:11:50] [17_bash_array.sh:138] - [I]end script - normally
+[2025/09/26:21:11:50] [17_bash_array.sh:141] - [I]end script - normally 1758913910297122
+[2025/09/26:21:11:50] [17_bash_array.sh:149] - [I]end script - normally 3497
+[2025/09/26:21:11:50] [17_bash_array.sh:153] - result 0.35

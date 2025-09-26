@@ -25,7 +25,28 @@ shopt -s extdebug
 set -o errtrace # Enable the err trap, code will get called when an error is detected
 # trap 'echo ERROR: There was an error in \(function\) "${FUNCNAME-main context}:$LINENO" , details to follow;exit 1' ERR
 trap "handle_error;exit 1" ERR
+# trap "handle_error;exit 1"  EXIT
+# trap "handle_error" EXIT
+# trap "handle_error" SIGINT # Call cleanup_and_exit function on Ctrl+C
+# FOUND HERE - https://linuxsimply.com/bash-scripting-tutorial/error-handling-and-debugging/error-handling/trap-err/
 
+# does not work
+# trap 'echo "Error occurred on line $LINENO: $BASH_COMMAND (exit code: $?)" ;  exit 1
+
+# does not work
+# trap 'echo "An error occurred: $BASH_COMMAND"; exit 1'
+
+# Manual triggering of errors to test the trap function
+# cd /tmp/unsense
+
+# ------------- log ---------------- #
+# FROM HERE
+# https://stackoverflow.com/questions/14008125/shell-script-common-template
+# SCRIPT_NAME=$(/usr/bin/basename $BASH_SOURCE)|| exit 100
+# FULL_PATH=$(/usr/bin/realpath ${BASH_SOURCE[0]})|| exit 100
+
+# global variable for log
+# TAG="-"
 
 TAG="-"
 
@@ -127,7 +148,6 @@ main() {
 	local run_time=$((end - start))
 	log "${LINENO}" "[I]end script - normally ${run_time}"
 
-	#calculate in second
 	r=$(echo "${run_time} 10000" | awk '{printf "%.2f\n", $1 / $2}' )
 
 	log "${LINENO}" "result $r";
