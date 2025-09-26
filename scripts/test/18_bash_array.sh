@@ -78,10 +78,11 @@ function log() {
 	# arg2 = message
 
 	# FOUND HERE - https://stackoverflow.com/questions/17804007/how-to-show-line-number-when-executing-bash-script
-	echo "LINENO: ${LINENO}"
-    # echo "BASH_LINENO: ${BASH_LINENO[*]}"
+	# TODD clean up
+	# echo "LINENO: ${LINENO}"
+	# echo "BASH_LINENO: ${BASH_LINENO[*]}"
 
-	SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}" )"
+	SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}")"
 	# echo "script name => $SCRIPT_NAME";
 
 	if [ "$HIDE_LOG" ]; then
@@ -108,7 +109,7 @@ function handle_error() {
 
 	# sleep 5 && kill $$ &
 	# IFS=$' \t\n'  # Reset IFS to default value
-	echo "Hallo"
+	# echo "Hallo"
 	# && echo  $$ && echo $!
 
 	log "[I] Kill  "
@@ -122,45 +123,67 @@ function handle_error() {
 }
 
 function get_real_time() {
-	a="${EPOCHREALTIME/[^0-9]/}"
-	return "$a"
+	echo ${EPOCHREALTIME/[^0-9]/}
 }
 
 main() {
 
 	# echo $EPOCHSECONDS
-	log "${LINENO}" "[I]start script"
-	log "${LINENO}" "[D] REALTIME $(get_real_time)"
-	log "${LINENO}" "[D] REALTIME in second $EPOCHSECONDS"
+	local start;
+	start=$(get_real_time);
+	# start=${EPOCHREALTIME/[^0-9]/}
+	log "${LINENO}" "[I]start script  ${start}"
+	#log "${LINENO}" "[I]start script  $(get_real_time) "
+	#log "${LINENO}" "[D] REALTIME $(get_real_time) "
+	#log "${LINENO}" "[D] REALTIME in second $EPOCHSECONDS"
 
-	log "${LINENO}" "[D] nano ${EPOCHREALTIME/[^0-9]/}"
-	log "${LINENO}" "[D] REALTIME in second $EPOCHSECONDS"
-	log "${LINENO}" "[I]end script - normally"
+	log "${LINENO}" "[D] microsecond 1/1000000 second 	${EPOCHREALTIME/[^0-9]/}"
+	log "${LINENO}" "[D] millisecond 1/1000 second 		$((${EPOCHREALTIME/[^0-9]/} /1000))"
+	log "${LINENO}" "[D] second 1/1000 second 		$((${EPOCHREALTIME/[^0-9]/} /1000 / 1000))"
+	log "${LINENO}" "[D] second                               $EPOCHSECONDS"
+	log "${LINENO}" "[I] end script - normally ${start}"
 
-	start=${EPOCHREALTIME/[^0-9]/}
-	log "${LINENO}" "[I]end script - normally ${start}"
 	
-	# echo "${LINENO}" "start $start"
 
-	end=${EPOCHREALTIME/[^0-9]/}
-	echo "end $end"
+	# end=${EPOCHREALTIME/[^0-9]/}
+	local end;
+	end=$(get_real_time);
+	
 
-	local run_time=$((end - start))
-	log "${LINENO}" "[I]end script - normally ${run_time}"
+	local run_time;
+	run_time=$((end - start));
+	local run_time_second
+	run_time_second=$(((end - start)/1000/1000))
 
-	r=$(echo "${run_time} 10000" | awk '{printf "%.2f\n", $1 / $2}' )
+	# avoid bc
+	echo " comma $(bc -l <<< "scale=2; $((end - start))/1000/1000")"
 
-	log "${LINENO}" "result $r";
+	echo "x= $((end - start));  if(x<1){\"0\"};  x" | bc -l
+
+	log "${LINENO}" "[I]end script - normally ${run_time}  ${start} ${end}; # ${run_time_second}"
+
+	log "${LINENO}" "HALLO ${end[1]}";
+
+	array="${end}"
+	
+	log "${LINENO}" "array => ${array[ß]}"
+
+	log "${LINENO}" "array => ${array[4]}"
+
+
+	
+	if [ ${#run_time} -lt 4 ]; then
+		echo " < 4";
+	fi
+
 	# time_secs="$(${run_time}/1000| bc)";
 
 	# time in sec
 
 	#log "[I] real time => ","$(get_real_time)" ;
-
-	# echo "3174 10000" | awk '{printf "%.2f\n", $1 / $2}' => 0.22
 }
 
 main "$@"
 
 # code runner [STRG] + [ALT] + [N]
-# shfmt -w 17_bash_array.sh
+# shfmt -w 18_bash_array.sh
