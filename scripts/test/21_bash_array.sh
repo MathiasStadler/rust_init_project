@@ -54,6 +54,8 @@ function log() {
 	else
 		# TODO dmesg format
 		# echo "[$(date +"%Y/%m/%d:%H:%M:%S %z")] [$SCRIPT_NAME][$TAG] $*" | tee -a $LOG_FILE
+
+		# Mar 28 14:25:21
 		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$1] - $2" | tee -a $LOG_FILE
 	fi
 }
@@ -82,13 +84,32 @@ function handle_error() {
 
 function get_real_time() {
 	# shortcut, avoid boring copy work
-	a="${EPOCHREALTIME/[^0-9]/}"
-	return "$a"
+	# In sh/bash, return can only be used to signal success or failure (0 = success, 1-255 = failure),
+	# more akin to throw/raise in other languages.
+	# a=${EPOCHREALTIME/[^0-9]/}
+	# return "$a"
+	
+	# FOUND HERE
+	# $? – The exit status of the last executed command.
+	# FOUND HERE
+	# https://www.shellcheck.net/wiki/SC2320
+	command=${EPOCHREALTIME/[^0-9]/}
+	# $? – The exit status of the last executed command.
+	ret=$?
+
+	echo "$command" # output to stdout
+
+	return $ret
 }
 
 main() {
+	
+	# my start="$(get_real_time)";
+
+	start="$(get_real_time)";
+	
 	# start="$(get_real_time)"
-	log "${LINENO}" "[I]start script - $(get_real_time)"
+	# log "${LINENO}" "[I]start script - $(get_real_time)"
 	# log "${LINENO}" "[D] REALTIME $(get_real_time)"
 	# log "${LINENO}" "[D] REALTIME in second $EPOCHSECONDS"
 
@@ -108,12 +129,31 @@ main() {
 	
 	# time in sec
 
-	#log "[I] real time => ","$(get_real_time)" ;
+	
+	
+
 
 	# echo "3174 10000" | awk '{printf "%.2f\n", $1 / $2}' => 0.22
 
-	local run_time=$((end - start))
+	# local run_time=$((end - start))
+	
 	end=$(get_real_time)
+
+	log "[I] real time => " "$(get_real_time)" ;
+	log "[I] real time start => " "${start}" ;
+	log "[I] real time => " "${end}" ;
+
+	read -r -a array <<< "${start}"
+
+	log "[D] second => ${array[2]}"
+
+
+	# first sign of variable
+	# FOUND HERE - https://stackoverflow.com/questions/10218474/how-to-obtain-the-first-letter-in-a-bash-variable#10218528
+	# 
+	# first=${word::1}
+
+	echo "$((end - start)) 10000" 
 
 	during=$(echo "$((end - start)) 10000" | awk '{printf "%.2f\n", $1 / $2}' )
 	log "${LINENO}" "[I]end script - normally $during"

@@ -898,3 +898,65 @@ BASH_LINENO: 103 103 133 0
 Error occurred on line 96: return "$a" (exit code: 245)
 [2025/09/26:21:29:31] [21_bash_array.sh:91] - [I]start script - error handler
 Error occurred on line 91: return "$a" (exit code: 14)
+[2025/09/27:14:55:31] [21_bash_array.sh:91] - [I]start script - error handler
+Error occurred on line 91: return "$a" (exit code: 51)
+[2025/09/27:14:58:32] [21_bash_array.sh:93] - [I]start script - error handler
+Error occurred on line 93: return "$a" (exit code: 155)
+[2025/09/27:15:00:01] [21_bash_array.sh:93] - [I]start script - error handler
+Error occurred on line 93: return "$a" (exit code: 169)
+[2025/09/28:13:32:07] [21_bash_array.sh:141] - [I]end script - normally 0.06
+[2025/09/28:13:45:33] [21_bash_array.sh:[I] real time => ] - 1759059933655714
+[2025/09/28:13:45:33] [21_bash_array.sh:141] - [I]end script - normally 0.47
+[2025/09/28:13:49:22] [21_bash_array.sh:[I] real time => ] - 1759060162119999
+[2025/09/28:13:49:22] [21_bash_array.sh:[I] real time => ] - error handler
+Error occurred on line 133: start (exit code: 127)
+[2025/09/28:13:49:22] [21_bash_array.sh:[I] real time => ] - error handler
+Error occurred on line 134: end (exit code: 127)
+[2025/09/28:13:49:22] [21_bash_array.sh:144] - [I]end script - normally 1.43
+[2025/09/28:13:50:37] [21_bash_array.sh:[I] real time => ] - 1759060237038703
+[2025/09/28:13:50:37] [21_bash_array.sh:[I] real time => ] - error handler
+Error occurred on line 143: start (exit code: 127)
+[2025/09/28:13:50:37] [21_bash_array.sh:[I] real time => ] - error handler
+Error occurred on line 144: end (exit code: 127)
+[2025/09/28:13:50:37] [21_bash_array.sh:147] - [I]end script - normally 0.08
+[2025/09/28:13:51:06] [21_bash_array.sh:147] - [I]end script - normally 0.09
+[2025/09/28:13:51:26] [21_bash_array.sh:[I] real time => ] - 1759060286245767
+[2025/09/28:13:51:26] [21_bash_array.sh:147] - [I]end script - normally 0.09
+[2025/09/28:15:15:17] [21_bash_array.sh:[I] real time => ] - 1759065317632061
+[2025/09/28:15:15:17] [21_bash_array.sh:[I] real time => ] - error handler
+Error occurred on line 143: start (exit code: 127)
+[2025/09/28:15:15:17] [21_bash_array.sh:[I] real time => ] - error handler
+Error occurred on line 144: end (exit code: 127)
+[2025/09/28:15:15:17] [21_bash_array.sh:147] - [I]end script - normally 0.06
+[2025/09/28:15:16:45] [21_bash_array.sh:[I] real time => ] - 1759065405053479
+[2025/09/28:15:16:45] [21_bash_array.sh:[I] real time => ] - 1759065405052273
+[2025/09/28:15:16:45] [21_bash_array.sh:[I] real time => ] - 1759065405052912
+[2025/09/28:15:16:45] [21_bash_array.sh:147] - [I]end script - normally 0.06
+[2025/09/28:15:17:06] [21_bash_array.sh:[I] real time => ] - 1759065426085208
+[2025/09/28:15:17:06] [21_bash_array.sh:[I] real time => ] - 1759065426083556[1]
+[2025/09/28:15:17:06] [21_bash_array.sh:[I] real time => ] - 1759065426084469
+[2025/09/28:15:17:06] [21_bash_array.sh:147] - [I]end script - normally 0.09
+[2025/09/28:15:19:04] [21_bash_array.sh:[I] real time => ] - 1759065544752895
+[2025/09/28:15:19:04] [21_bash_array.sh:[I] real time => ] - 1759065544751813
+[2025/09/28:15:19:04] [21_bash_array.sh:[I] real time => ] - 1759065544752355
+[2025/09/28:15:19:04] [21_bash_array.sh:147] - [I]end script - normally 0.05
+[2025/09/28:15:20:43] [21_bash_array.sh:[I] real time => ] - 1759065643491736
+[2025/09/28:15:20:43] [21_bash_array.sh:[I] real time => ] - 1759065643490226
+[2025/09/28:15:20:43] [21_bash_array.sh:[I] real time => ] - 1759065643491079
+[2025/09/28:15:20:43] [21_bash_array.sh:[D] second => ] - 
+[2025/09/28:15:20:43] [21_bash_array.sh:152] - [I]end script - normally 0.09
+[2025/09/28:15:21:04] [21_bash_array.sh:[I] real time => ] - 1759065664513714
+[2025/09/28:15:21:04] [21_bash_array.sh:[I] real time start => ] - 1759065664512247
+[2025/09/28:15:21:04] [21_bash_array.sh:[I] real time => ] - 1759065664513070
+[2025/09/28:15:21:04] [21_bash_array.sh:[D] second => ] - 
+[2025/09/28:15:21:04] [21_bash_array.sh:152] - [I]end script - normally 0.08
+[2025/09/28:15:21:38] [21_bash_array.sh:[I] real time => ] - 1759065698849221
+[2025/09/28:15:21:38] [21_bash_array.sh:[I] real time start => ] - 1759065698847520
+[2025/09/28:15:21:38] [21_bash_array.sh:[I] real time => ] - 1759065698848438
+[2025/09/28:15:21:38] [21_bash_array.sh:[D] second => ] - 
+[2025/09/28:15:21:38] [21_bash_array.sh:152] - [I]end script - normally 0.09
+[2025/09/28:15:36:48] [21_bash_array.sh:[I] real time => ] - 1759066608876763
+[2025/09/28:15:36:48] [21_bash_array.sh:[I] real time start => ] - 1759066608875035
+[2025/09/28:15:36:48] [21_bash_array.sh:[I] real time => ] - 1759066608875969
+[2025/09/28:15:36:48] [21_bash_array.sh:[D] second => ] - 
+[2025/09/28:15:36:48] [21_bash_array.sh:159] - [I]end script - normally 0.09
