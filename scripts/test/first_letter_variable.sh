@@ -18,4 +18,24 @@ echo "First sign ${second_sign}";
 # echo "First sign ${two_started_sign}";
 
 # length of string
-echo "Length of variable$ => {#variable}";
+echo "Length of variable$ => ${#variable}";
+target=${#variable};
+
+#!/bin/bash
+for i in {1..10}
+do
+ echo "Loop spin:" " $i"
+done
+
+# from="a" to="m"
+# for c in $(eval "echo {$from..$to}"); do echo "$c"; done
+
+#!/bin/bash
+
+for i in $(eval "echo {0..$target}");
+do 
+echo "$i";
+echo " sign ${variable:$i:1}"
+done
+
+
