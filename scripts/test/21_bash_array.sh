@@ -154,6 +154,7 @@ main() {
 	# first=${word::1}
 
 	echo "$((end - start)) 10000" 
+	log "${LINENO}" "start end $start $end"
 
 	during=$(echo "$((end - start)) 10000" | awk '{printf "%.2f\n", $1 / $2}' )
 	log "${LINENO}" "[I]end script - normally $during"

@@ -960,3 +960,14 @@ Error occurred on line 144: end (exit code: 127)
 [2025/09/28:15:36:48] [21_bash_array.sh:[I] real time => ] - 1759066608875969
 [2025/09/28:15:36:48] [21_bash_array.sh:[D] second => ] - 
 [2025/09/28:15:36:48] [21_bash_array.sh:159] - [I]end script - normally 0.09
+[2025/09/28:21:09:54] [21_bash_array.sh:[I] real time => ] - 1759086594448399
+[2025/09/28:21:09:54] [21_bash_array.sh:[I] real time start => ] - 1759086594446868
+[2025/09/28:21:09:54] [21_bash_array.sh:[I] real time => ] - 1759086594447750
+[2025/09/28:21:09:54] [21_bash_array.sh:[D] second => ] - 
+[2025/09/28:21:09:54] [21_bash_array.sh:159] - [I]end script - normally 0.09
+[2025/09/28:21:12:07] [21_bash_array.sh:[I] real time => ] - 1759086727444720
+[2025/09/28:21:12:07] [21_bash_array.sh:[I] real time start => ] - 1759086727443225
+[2025/09/28:21:12:07] [21_bash_array.sh:[I] real time => ] - 1759086727443919
+[2025/09/28:21:12:07] [21_bash_array.sh:[D] second => ] - 
+[2025/09/28:21:12:07] [21_bash_array.sh:157] - start end 1759086727443225 1759086727443919
+[2025/09/28:21:12:07] [21_bash_array.sh:160] - [I]end script - normally 0.07

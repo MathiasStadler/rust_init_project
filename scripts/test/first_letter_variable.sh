@@ -6,6 +6,24 @@
 
 variable="1759059933655714";
 
+# four
+end="1759086727449999";
+start="1759086727441111";
+result="$((end - start))"
+echo "result => $result"
+echo "length of result ${#result}";
+echo " r=$(echo "$((end - start)) 10000" | awk '{printf "%.2f\n", $1 / $2}' )"
+
+# five
+  end="1759086727499999";
+start="1759086727411111";
+result="$((end - start))"
+echo "result => $result"
+echo "length of result ${#result}";
+echo " r=$(echo "$((end - start)) 10000" | awk '{printf "%.2f\n", $1 / $2}' )"
+
+#wann sind es volle secunden set a cammo
+
 first_sign=${variable:0:1}
 first_sign=${variable::1}
 #two_started_sign=${variable:1:2}
@@ -30,12 +48,19 @@ done
 # from="a" to="m"
 # for c in $(eval "echo {$from..$to}"); do echo "$c"; done
 
-#!/bin/bash
+# Initialize an empty array for copying
+# FOUND HERE
+# https://linuxsimply.com/bash-scripting-tutorial/array/array-operations/copy-array/
+clone_array=()
 
 for i in $(eval "echo {0..$target}");
-do 
+do
+# add  
 echo "$i";
 echo " sign ${variable:$i:1}"
+clone_array+=("${variable:$i:1}")
 done
 
+
+echo "clone array ${clone_array[*]}"
 
