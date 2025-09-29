@@ -3,6 +3,9 @@
 
 # set -x
 
+# calculate the difference from two floating point numbers in plain bash
+# in plain bash function detect different - Since the function diff / awk / bc  doesn't exist in plain bash 
+
 trap "handle_error;exit 1" ERR
 
 # FOUND HERE - https://linuxsimply.com/bash-scripting-tutorial/error-handling-and-debugging/error-handling/trap-err/
@@ -31,8 +34,8 @@ function handle_error() {
 different=1 # true = 0, false=1
 
 function calc_different() {
+# DESC
 
-# in plain bash function detect different - Since the function doesn't exist in bash => diff / awk / bc not available
 # $1 start first floating number as string
 # $2 end second floating number as string
 
