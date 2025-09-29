@@ -992,3 +992,102 @@ Error occurred on line 144: end (exit code: 127)
 [2025/09/29:15:28:37 +0200] [-] I start
 [2025/09/29:15:28:37 +0200] [-] I Same length
 [2025/09/29:15:28:37 +0200] [-] I ERROR Not the same length
+[2025/09/29:15:33:37 +0200] [-] I start
+[2025/09/29:15:33:37 +0200] [-] I Same length
+[2025/09/29:15:33:37 +0200] [-] I ERROR Not the same length
+[2025/09/29:15:34:36 +0200] [-] I start
+[2025/09/29:15:34:36 +0200] [-] I Same length
+[2025/09/29:15:34:36 +0200] [-] I ERROR Not the same length
+[2025/09/29:15:34:53 +0200] [-] I start
+[2025/09/29:15:34:53 +0200] [-] I Same length
+[2025/09/29:15:34:53 +0200] [-] I ERROR Not the same length
+[2025/09/29:15:50:51 +0200] [-] I start
+[2025/09/29:15:50:51 +0200] [-] I ERROR Not the same length
+[2025/09/29:15:51:27 +0200] [-] I start
+[2025/09/29:15:51:27 +0200] [-] I ERROR Not the same length
+[2025/09/29:15:52:07 +0200] [-] I start
+[2025/09/29:15:52:07 +0200] [-] I Same length
+[2025/09/29:15:52:07 +0200] [-] I end
+[2025/09/29:15:53:29 +0200] [-] I start
+[2025/09/29:15:53:29 +0200] [-] I OK => Same length 16 
+[2025/09/29:15:53:29 +0200] [-] I end
+[2025/09/29:15:56:20 +0200] [-] I start
+[2025/09/29:15:56:20 +0200] [-] I OK => Same length 16 
+[2025/09/29:15:56:20 +0200] [-] D Iter = 0 Digit of a number NOT equal sign 0 1 :: sign 0 1 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 1 Digit of a number NOT equal sign 1 7 :: sign 1 7 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 2 Digit of a number NOT equal sign 2 5 :: sign 2 5 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 3 Digit of a number NOT equal sign 3 9 :: sign 3 9 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 4 Digit of a number NOT equal sign 4 1 :: sign 4 1 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 5 Digit of a number NOT equal sign 5 4 :: sign 5 4 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 6 Digit of a number NOT equal sign 6 4 :: sign 6 4 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 7 Digit of a number NOT equal sign 7 8 :: sign 7 8 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 8 Digit of a number NOT equal sign 8 5 :: sign 8 5 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 9 Digit of a number NOT equal sign 9 2 :: sign 9 2 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 10 Digit of a number NOT equal sign 10 0 :: sign 10 0 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 11 Digit of a number NOT equal sign 11 6 :: sign 11 6 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 12 Digit of a number NOT equal sign 12 1 :: sign 12 2 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 13 Digit of a number NOT equal sign 13 8 :: sign 13 4 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 14 Digit of a number NOT equal sign 14 1 :: sign 14 4 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 15 Digit of a number NOT equal sign 15 5 :: sign 15 4 => write to different array
+[2025/09/29:15:56:20 +0200] [-] D Iter = 16 Digit of a number NOT equal sign 16  :: sign 16  => write to different array
+[2025/09/29:15:56:20 +0200] [-] I end
+[2025/09/29:15:58:51 +0200] [-] I start
+[2025/09/29:15:58:51 +0200] [-] I OK => Same length 16 
+[2025/09/29:15:58:51 +0200] [-] D Iter = 0 Digit of a number NOT equal sign 0 1 :: sign 0 1 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 1 Digit of a number NOT equal sign 1 7 :: sign 1 7 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 2 Digit of a number NOT equal sign 2 5 :: sign 2 5 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 3 Digit of a number NOT equal sign 3 9 :: sign 3 9 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 4 Digit of a number NOT equal sign 4 1 :: sign 4 1 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 5 Digit of a number NOT equal sign 5 4 :: sign 5 4 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 6 Digit of a number NOT equal sign 6 4 :: sign 6 4 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 7 Digit of a number NOT equal sign 7 8 :: sign 7 8 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 8 Digit of a number NOT equal sign 8 5 :: sign 8 5 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 9 Digit of a number NOT equal sign 9 2 :: sign 9 2 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 10 Digit of a number NOT equal sign 10 0 :: sign 10 0 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 11 Digit of a number NOT equal sign 11 6 :: sign 11 6 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 12 Digit of a number NOT equal sign 12 1 :: sign 12 2 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 13 Digit of a number NOT equal sign 13 8 :: sign 13 4 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 14 Digit of a number NOT equal sign 14 1 :: sign 14 4 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 15 Digit of a number NOT equal sign 15 5 :: sign 15 4 => write to different array
+[2025/09/29:15:58:51 +0200] [-] D Iter = 16 Digit of a number NOT equal sign 16  :: sign 16  => write to different array
+[2025/09/29:15:58:51 +0200] [-] I end
+[2025/09/29:16:01:20 +0200] [-] I start
+[2025/09/29:16:01:20 +0200] [-] I OK => Same length 16 
+[2025/09/29:16:01:20 +0200] [-] D Iter = 0 Digit of a number NOT equal sign 0 1 :: sign 0 1 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 1 Digit of a number NOT equal sign 1 7 :: sign 1 7 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 2 Digit of a number NOT equal sign 2 5 :: sign 2 5 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 3 Digit of a number NOT equal sign 3 9 :: sign 3 9 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 4 Digit of a number NOT equal sign 4 1 :: sign 4 1 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 5 Digit of a number NOT equal sign 5 4 :: sign 5 4 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 6 Digit of a number NOT equal sign 6 4 :: sign 6 4 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 7 Digit of a number NOT equal sign 7 8 :: sign 7 8 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 8 Digit of a number NOT equal sign 8 5 :: sign 8 5 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 9 Digit of a number NOT equal sign 9 2 :: sign 9 2 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 10 Digit of a number NOT equal sign 10 0 :: sign 10 0 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 11 Digit of a number NOT equal sign 11 6 :: sign 11 6 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 12 Digit of a number NOT equal sign 12 1 :: sign 12 2 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 13 Digit of a number NOT equal sign 13 8 :: sign 13 4 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 14 Digit of a number NOT equal sign 14 1 :: sign 14 4 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 15 Digit of a number NOT equal sign 15 5 :: sign 15 4 => write to different array
+[2025/09/29:16:01:20 +0200] [-] D Iter = 16 Digit of a number NOT equal sign 16  :: sign 16  => write to different array
+[2025/09/29:16:01:20 +0200] [-] I end
+[2025/09/29:16:02:04 +0200] [-] I start
+[2025/09/29:16:02:04 +0200] [-] I OK => Same length 16 
+[2025/09/29:16:02:04 +0200] [-] D Iter = 0 Digit of a number equal     1 :: 1
+[2025/09/29:16:02:04 +0200] [-] D Iter = 1 Digit of a number equal     7 :: 7
+[2025/09/29:16:02:04 +0200] [-] D Iter = 2 Digit of a number equal     5 :: 5
+[2025/09/29:16:02:04 +0200] [-] D Iter = 3 Digit of a number equal     9 :: 9
+[2025/09/29:16:02:04 +0200] [-] D Iter = 4 Digit of a number equal     1 :: 1
+[2025/09/29:16:02:04 +0200] [-] D Iter = 5 Digit of a number equal     4 :: 4
+[2025/09/29:16:02:04 +0200] [-] D Iter = 6 Digit of a number equal     4 :: 4
+[2025/09/29:16:02:04 +0200] [-] D Iter = 7 Digit of a number equal     8 :: 8
+[2025/09/29:16:02:04 +0200] [-] D Iter = 8 Digit of a number equal     5 :: 5
+[2025/09/29:16:02:04 +0200] [-] D Iter = 9 Digit of a number equal     2 :: 2
+[2025/09/29:16:02:04 +0200] [-] D Iter = 10 Digit of a number equal     0 :: 0
+[2025/09/29:16:02:04 +0200] [-] D Iter = 11 Digit of a number equal     6 :: 6
+[2025/09/29:16:02:04 +0200] [-] D Iter = 12 Digit of a number NOT equal 1 :: 2 => write to different array
+[2025/09/29:16:02:04 +0200] [-] D Iter = 13 Digit of a number NOT equal 8 :: 4 => write to different array
+[2025/09/29:16:02:04 +0200] [-] D Iter = 14 Digit of a number NOT equal 1 :: 4 => write to different array
+[2025/09/29:16:02:04 +0200] [-] D Iter = 15 Digit of a number NOT equal 5 :: 4 => write to different array
+[2025/09/29:16:02:04 +0200] [-] D Iter = 16 Digit of a number NOT equal  ::  => write to different array
+[2025/09/29:16:02:04 +0200] [-] I end

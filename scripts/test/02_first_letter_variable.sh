@@ -16,10 +16,12 @@
 # echo "Iteration $count"
 # done
 
-a=${#start};
+# a=${#start};
+
 different=1 # true = 0, false=1
-different_start=()
-different_end=()
+
+# different_start=()
+# different_end=()
 
 
 
@@ -33,21 +35,23 @@ function calc_different() {
 start=$1;
 end=$2;
 
-echo "$1"
-echo "$2"
+# echo "$1"
+# echo "$2"
 #1: get the length of strings
-
-len_start="${start}";
-len_end="${end}";
-
 len_start="${#start}";
 len_end="${#end}";
-echo "$len_start"
-echo "$len_end"
+
+# garbage
+# len_start="${#start}";
+# len_end="${#end}";
+#echo "$len_start"
+#echo "$len_end"
+
 #2: check if have the same length
-if [[ "$len_start" = "$len_end" ]];
-log "I" "Same length"
-then
+# if [[ $len_start -eq $len_end ]];
+if [ "$len_start" = "$len_end" ]; then
+log "I" "OK => Same length $len_start "
+else
 log "I" "ERROR Not the same length"
 exit 1;
 fi
@@ -56,20 +60,20 @@ fi
 start=$1
 end=$2
 
-# iter over both strings
-for ((i=0; i<=a; i++)); do
+# iter/loop  over both strings
+for ((i=0; i<=len_start; i++)); do
 # echo "Iter $i"
-sign_start="sign $i ${start:$i:1}";
-# echo "$sign_start"
-sign_end="sign $i ${end:$i:1}";
-# echo "$sign_end"
+sign_start=${start:$i:1};
+sign_end=${end:$i:1};
+echo "X sign_start $sign_start"
+echo "X sign_end $sign_end"
 # FOUND HERE
 # https://linuxsimply.com/bash-scripting-tutorial/conditional-statements/if-else/compare-numbers/
-if [[ "$sign_start" -eq "$sign_end" ]];
+if [ "$sign_start" -eq "$sign_end" ];
  then
-    log "D" " Iter = $i Digit of a number equal $sign_start :: $sign_end"
+    log "D" "Iter = $i Digit of a number equal     $sign_start :: $sign_end"
  else
-    echo "Iter = $i Digit of a number NOT equal => write to different array"
+    log "D" "Iter = $i Digit of a number NOT equal $sign_start :: $sign_end => write to different array"
     different=0 # true
     
 fi
