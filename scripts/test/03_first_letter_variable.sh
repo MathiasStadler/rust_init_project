@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 # shellcheck shell=bash
 
+# set -x
 
 trap "handle_error;exit 1" ERR
 
@@ -107,7 +108,6 @@ then
   log "I" "enter digit to array start=$sign_start , end=$sign_end";
   different_start+=("$sign_start")
   different_end+=("$sign_end")
-
 fi
 
 done
@@ -117,7 +117,34 @@ echo "end ${different_end[*]}"
 
 # length of array
 echo "start ${#different_start[*]}"
+
+my_string=$(IFS=, ; echo "${different_start[*]}")
+echo "my_staring $my_string";
+# FOUND HERE
+# https://collectingwisdom.com/bash-join-array-by-delimiter/
 echo "end ${#different_end[*]}"
+echo "IFS=, ; echo ${#different_end[*]}"
+
+# FOUND HERE
+# https://bashcommands.com/bash-array-to-string
+
+IFS="" read -r my_string <<< "${different_end[*]}"
+echo "my_string => $my_string"
+
+# FOUND HERE
+# https://bashcommands.com/bash-array-to-string
+result_start=$(printf "%s" "${different_start[@]}")
+result_end=$(printf "%s" "${different_end[@]}")
+
+echo "result start $result_start"
+echo "result end $result_end"
+
+echo " result => $(( result_end - result_start )) "
+
+#my_string=$(IFS=, ; echo "${different_end[*]}")
+#echo "$my_string";
+#my_string=$("${different_end[*]}")
+#echo "$my_string";
 return 0;
 }
 
