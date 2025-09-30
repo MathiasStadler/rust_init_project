@@ -68,7 +68,7 @@ if [[ "$sign_start" -eq "$sign_end" ]];
  then
     log "${LINENO}" "[D] Iter = $i Digit of a number equal     $sign_start :: $sign_end"
  else
-    log "D" "Iter = $i Digit of a number NOT equal $sign_start :: $sign_end => write to different array"
+    log "${LINENO}"  "[D] Iter = $i Digit of a number NOT equal $sign_start :: $sign_end => write to different array"
     different=0 # different set 0 == true
 fi
 
@@ -81,43 +81,17 @@ fi
 
 done
 
-# echo "start ${different_start[*]}"
-# echo "end ${different_end[*]}"
-
-# length of array
-# echo "start ${#different_start[*]}"
-
-
-# WRONG 
-# my_string=$(IFS=, ; echo "${different_start[*]}")
-# echo "my_staring $my_string";
-# FOUND HERE
-# https://collectingwisdom.com/bash-join-array-by-delimiter/
-# echo "end ${#different_end[*]}"
-# echo "IFS=, ; echo ${#different_end[*]}"
-
-# FOUND HERE
-# https://bashcommands.com/bash-array-to-string
-
-# wrong
-# IFS="" read -r my_string <<< "${different_end[*]}"
-# echo "my_string => $my_string"
-
 # convert array to string
 # FOUND HERE
 # https://bashcommands.com/bash-array-to-string
 result_start=$(printf "%s" "${different_start[@]}")
 result_end=$(printf "%s" "${different_end[@]}")
 
-log "${LINENO}" "result start $result_start"
-log "${LINENO}" "result end $result_end"
+log "${LINENO}" "[D] result start $result_start"
+log "${LINENO}" "[D] result end $result_end"
 
-log "${LINENO}" " result => $(( result_end - result_start )) "
+log "${LINENO}" "[D] result => $(( result_end - result_start )) "
 
-#my_string=$(IFS=, ; echo "${different_end[*]}")
-#echo "$my_string";
-#my_string=$("${different_end[*]}")
-#echo "$my_string";
 return 0;
 }
 
@@ -130,10 +104,7 @@ function log() {
 
 	# arg1 = line number
 	# arg2 = message
-
 	# FOUND HERE - https://stackoverflow.com/questions/17804007/how-to-show-line-number-when-executing-bash-script
-	
-
 	SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}")"
 	
 	if [ "$HIDE_LOG" ]; then
@@ -145,32 +116,46 @@ function log() {
 }
 # end function log
 
-# #start log
-# function log() {
-# # log - useful for script flow level info/debug
-
-# 	if [ "$HIDE_LOG" ]; then
-# 		echo -e "[$TAG] $*" >>$LOG_FILE
-# 	else
-# 		echo "[$(date +"%Y/%m/%d:%H:%M:%S %z")] [$TAG] $*" | tee -a $LOG_FILE
-# 	fi
-
-# return 0;
-# }
-# # end function log
-
-
 function run () {
 
+# Unterstützt Unix-Zeitstempel in Sekunden, Millisekunden, Mikrosekunden und Nanosekunden.
+# https://timestamp.toolify.cc/de/
+# 1759231287
+
+#
+# 1759144852061
+# second
+# 1759144852
+# milles seconds
+# 1759144852061
+
+
+
+#micro-second granularity: $EPOCHREALTIME
+# FOUND HERE https://unix.stackexchange.com/questions/69322/how-to-get-milliseconds-since-unix-epoch
+# echo "$(( ${EPOCHREALTIME//.} / 1000 ))"
+
+# echo "$(( ${EPOCHREALTIME//.} / 1000 ))"
+# a="${EPOCHREALTIME/[^0-9]/}"
+
+# without point 
+# echo " ${EPOCHREALTIME//.}"
+# with point
+# printf " ${EPOCHREALTIME} \n ${EPOCHREALTIME//.} \n\n"
+
+# test case
 start="1759144852061815";
   end="1759144852062444";
 
+# REMOVE
 # calc_different()
 # calc_different(start, end)
 
-log "I" "start";
+# REMOVE log "I" "start";
+log "${LINENO}" "[I] start"
 calc_different "$start" "$end";
-log "I" "end";
+# REMOVE log "I" "end";
+log "${LINENO}" "[I] end"
 
   return 0;
 }
@@ -186,3 +171,4 @@ main;
 
 # TODO [Running] /usr/bin/bash "/home/trapapa/workspace_codium/rust_init_project/scripts/test/02_first_letter_variable.sh"
 # TODO [Done] exited with code=1 in 0.016 seconds
+
