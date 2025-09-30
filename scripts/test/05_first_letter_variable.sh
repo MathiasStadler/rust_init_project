@@ -128,7 +128,15 @@ function run () {
 # 1759144852
 # milles seconds
 # 1759144852061
+# nano second
+# 1759144852061815
 
+# second
+# 1759234385
+# milles
+# 175923438520
+# nano 
+# 1759234385204456 
 
 
 #micro-second granularity: $EPOCHREALTIME
