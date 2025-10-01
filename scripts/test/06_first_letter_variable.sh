@@ -3,7 +3,22 @@
 
 # set -x
 
+set -o errexit
+
+#LOG_LEVEL="" <program name>
+
+declare LOG_LEVEL
+
+# not nice but useful
+
+if [[ ! -v LOG_LEVEL ]]; then echo "LOG_LEVEL is NOT set. Set like =>  LOG_LEVEL=info ./<script_name> "; fi
+
+if [[ -v LOG_LEVEL ]]; then echo "LOG_LEVEL is set on => $LOG_LEVEL"; fi
+
+# echo "LOG level is set of $LOG_LEVEL";
+
 # calculate the difference from two floating point numbers in plain bash
+# Sorry wrong english
 # in plain bash function detect different - Since the function diff / awk / bc  doesn't exist in plain bash 
 
 trap "handle_error;exit 1" ERR
@@ -105,13 +120,27 @@ function log() {
 	# arg1 = line number
 	# arg2 = message
 	# FOUND HERE - https://stackoverflow.com/questions/17804007/how-to-show-line-number-when-executing-bash-script
+	
+	
+	# if [ ${#1} -eq "1" ]; then
 	SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}")"
 	
 	if [ "$HIDE_LOG" ]; then
 		echo -e "[$TAG] $*" >>$LOG_FILE
 	else
 		# echo "[$(date +"%Y/%m/%d:%H:%M:%S %z")] [$SCRIPT_NAME][$TAG] $*" | tee -a $LOG_FILE
-		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$1] - $2" | tee -a $LOG_FILE
+		# echo "DEBUG => ${#1}";
+		if [ "${#1}" -eq "1" ]; then
+		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:  $1] - $2" | tee -a $LOG_FILE
+		elif [ "${#1}" -eq "2" ]; then
+		# one more blank whitespace
+		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:  $1] - $2" | tee -a $LOG_FILE
+		elif [ "${#1}" -eq "3" ]; then
+		# one more blank whitespace
+		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME: $1] - $2" | tee -a $LOG_FILE
+		else
+		echo "not handle"
+		fi
 	fi
 }
 # end function log
@@ -171,7 +200,7 @@ log "${LINENO}" "[I] end"
 
 function main(){
 
-log "I" "start $$";
+log "${LINENO}" "[I] start $$";
 run||exit_handler;
 }
 
