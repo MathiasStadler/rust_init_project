@@ -146,6 +146,8 @@ function log() {
 }
 # end function log
 
+# test only build in commands 
+
 function run () {
 
 # Unterstützt Unix-Zeitstempel in Sekunden, Millisekunden, Mikrosekunden und Nanosekunden.
