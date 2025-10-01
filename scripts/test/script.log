@@ -3845,3 +3845,428 @@ Error occurred on line 144: end (exit code: 127)
 [2025/10/01:13:59:47] [06_first_letter_variable.sh:108] -[D] result end 2444
 [2025/10/01:13:59:47] [06_first_letter_variable.sh:110] -[D] result => 629 
 [2025/10/01:13:59:47] [06_first_letter_variable.sh:216] -[I] end
+[2025/10/01:17:00:31] [06_first_letter_variable.sh:223] -[I] start 39212
+[2025/10/01:17:00:31] [06_first_letter_variable.sh:212] -[I] start
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 67] -[I] OK => Same length 16 
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 74] -[D] 1759144852061815
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 0
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 0 Digit of a number equal     1 :: 1
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 1
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 1 Digit of a number equal     7 :: 7
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 2
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 2 Digit of a number equal     5 :: 5
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 3
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 3 Digit of a number equal     9 :: 9
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 4
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 4 Digit of a number equal     1 :: 1
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 5
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 5 Digit of a number equal     4 :: 4
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 6
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 6 Digit of a number equal     4 :: 4
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 7
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 7 Digit of a number equal     8 :: 8
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 8
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 8 Digit of a number equal     5 :: 5
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 9
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 9 Digit of a number equal     2 :: 2
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 10
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 10 Digit of a number equal     0 :: 0
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 11
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 11 Digit of a number equal     6 :: 6
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 12
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 88] -[D] Iter = 12 Digit of a number NOT equal 1 :: 2 => write to different array
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 94] -[I] enter digit to array start=1 , end=2
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 13
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 88] -[D] Iter = 13 Digit of a number NOT equal 8 :: 4 => write to different array
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 94] -[I] enter digit to array start=8 , end=4
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 14
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 88] -[D] Iter = 14 Digit of a number NOT equal 1 :: 4 => write to different array
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 94] -[I] enter digit to array start=1 , end=4
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 15
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 88] -[D] Iter = 15 Digit of a number NOT equal 5 :: 4 => write to different array
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 94] -[I] enter digit to array start=5 , end=4
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 77] -[D] Iter digit/sign of string 16
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 86] -[D] Iter = 16 Digit of a number equal      :: 
+[2025/10/01:17:00:31] [06_first_letter_variable.sh: 94] -[I] enter digit to array start= , end=
+[2025/10/01:17:00:31] [06_first_letter_variable.sh:107] -[D] result start 1815
+[2025/10/01:17:00:31] [06_first_letter_variable.sh:108] -[D] result end 2444
+[2025/10/01:17:00:31] [06_first_letter_variable.sh:110] -[D] result => 629 
+[2025/10/01:17:00:31] [06_first_letter_variable.sh:215] -[I] end
+[2025/10/01:17:02:51] [07_first_letter_variable.sh:228] -[I] start 39548
+[2025/10/01:17:02:51] [07_first_letter_variable.sh:217] -[I] start
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 72] -[I] OK => Same length 16 
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 79] -[D] 1759144852061815
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 0
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 0 Digit of a number equal     1 :: 1
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 1
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 1 Digit of a number equal     7 :: 7
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 2
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 2 Digit of a number equal     5 :: 5
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 3
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 3 Digit of a number equal     9 :: 9
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 4
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 4 Digit of a number equal     1 :: 1
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 5
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 5 Digit of a number equal     4 :: 4
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 6
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 6 Digit of a number equal     4 :: 4
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 7
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 7 Digit of a number equal     8 :: 8
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 8
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 8 Digit of a number equal     5 :: 5
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 9
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 9 Digit of a number equal     2 :: 2
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 10
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 10 Digit of a number equal     0 :: 0
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 11
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 11 Digit of a number equal     6 :: 6
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 12
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 93] -[D] Iter = 12 Digit of a number NOT equal 1 :: 2 => write to different array
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=1 , end=2
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 13
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 93] -[D] Iter = 13 Digit of a number NOT equal 8 :: 4 => write to different array
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=8 , end=4
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 14
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 93] -[D] Iter = 14 Digit of a number NOT equal 1 :: 4 => write to different array
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=1 , end=4
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 15
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 93] -[D] Iter = 15 Digit of a number NOT equal 5 :: 4 => write to different array
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=5 , end=4
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 16
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 91] -[D] Iter = 16 Digit of a number equal      :: 
+[2025/10/01:17:02:51] [07_first_letter_variable.sh: 99] -[I] enter digit to array start= , end=
+[2025/10/01:17:02:51] [07_first_letter_variable.sh:112] -[D] result start 1815
+[2025/10/01:17:02:51] [07_first_letter_variable.sh:113] -[D] result end 2444
+[2025/10/01:17:02:51] [07_first_letter_variable.sh:115] -[D] result => 629 
+[2025/10/01:17:02:51] [07_first_letter_variable.sh:220] -[I] end
+[2025/10/01:17:07:12] [07_first_letter_variable.sh:232] -[I] start 40324
+[2025/10/01:17:07:13] [07_first_letter_variable.sh:221] -[I] start
+[2025/10/01:17:07:13] [07_first_letter_variable.sh: 74] -[I]ERROR Not the same length
+[2025/10/01:17:08:28] [07_first_letter_variable.sh:232] -[I] start 40419
+[2025/10/01:17:08:29] [07_first_letter_variable.sh:221] -[I] start
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 72] -[I] OK => Same length 17 
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 79] -[D] 1759331308.201773
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 0
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 0 Digit of a number equal     1 :: 1
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 1
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 1 Digit of a number equal     7 :: 7
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 2
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 2 Digit of a number equal     5 :: 5
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 3
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 3 Digit of a number equal     9 :: 9
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 4
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 4 Digit of a number equal     3 :: 3
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 5
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 5 Digit of a number equal     3 :: 3
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 6
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 6 Digit of a number equal     1 :: 1
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 7
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 7 Digit of a number equal     3 :: 3
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 8
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 8 Digit of a number equal     0 :: 0
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 9
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 93] -[D] Iter = 9 Digit of a number NOT equal 8 :: 9 => write to different array
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=8 , end=9
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 10
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 93] -[D] Iter = 10 Digit of a number NOT equal . :: . => write to different array
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=. , end=.
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 11
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 11 Digit of a number equal     2 :: 2
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=2 , end=2
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 12
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 12 Digit of a number equal     0 :: 0
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=0 , end=0
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 13
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 93] -[D] Iter = 13 Digit of a number NOT equal 1 :: 3 => write to different array
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=1 , end=3
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 14
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 93] -[D] Iter = 14 Digit of a number NOT equal 7 :: 0 => write to different array
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=7 , end=0
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 15
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 93] -[D] Iter = 15 Digit of a number NOT equal 7 :: 8 => write to different array
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=7 , end=8
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 16
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 93] -[D] Iter = 16 Digit of a number NOT equal 3 :: 4 => write to different array
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=3 , end=4
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 17
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 91] -[D] Iter = 17 Digit of a number equal      :: 
+[2025/10/01:17:08:29] [07_first_letter_variable.sh: 99] -[I] enter digit to array start= , end=
+[2025/10/01:17:08:29] [07_first_letter_variable.sh:112] -[D] result start 8.201773
+[2025/10/01:17:08:29] [07_first_letter_variable.sh:113] -[D] result end 9.203084
+[2025/10/01:17:10:49] [07_first_letter_variable.sh:232] -[I] start 40821
+[2025/10/01:17:10:50] [07_first_letter_variable.sh:221] -[I] start
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 72] -[I] OK => Same length 17 
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 79] -[D] 1759331449.031171
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 0
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 0 Digit of a number equal     1 :: 1
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 1
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 1 Digit of a number equal     7 :: 7
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 2
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 2 Digit of a number equal     5 :: 5
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 3
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 3 Digit of a number equal     9 :: 9
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 4
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 4 Digit of a number equal     3 :: 3
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 5
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 5 Digit of a number equal     3 :: 3
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 6
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 6 Digit of a number equal     1 :: 1
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 7
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 7 Digit of a number equal     4 :: 4
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 8
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 93] -[D] Iter = 8 Digit of a number NOT equal 4 :: 5 => write to different array
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=4 , end=5
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 9
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 93] -[D] Iter = 9 Digit of a number NOT equal 9 :: 0 => write to different array
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=9 , end=0
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 10
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 93] -[D] Iter = 10 Digit of a number NOT equal . :: . => write to different array
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=. , end=.
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 11
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 11 Digit of a number equal     0 :: 0
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=0 , end=0
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 12
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 12 Digit of a number equal     3 :: 3
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=3 , end=3
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 13
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 93] -[D] Iter = 13 Digit of a number NOT equal 1 :: 2 => write to different array
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=1 , end=2
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 14
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 93] -[D] Iter = 14 Digit of a number NOT equal 1 :: 5 => write to different array
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=1 , end=5
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 15
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 93] -[D] Iter = 15 Digit of a number NOT equal 7 :: 3 => write to different array
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=7 , end=3
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 16
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 93] -[D] Iter = 16 Digit of a number NOT equal 1 :: 8 => write to different array
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start=1 , end=8
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 17
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 91] -[D] Iter = 17 Digit of a number equal      :: 
+[2025/10/01:17:10:50] [07_first_letter_variable.sh: 99] -[I] enter digit to array start= , end=
+[2025/10/01:17:10:50] [07_first_letter_variable.sh:112] -[D] result start 49.031171
+[2025/10/01:17:10:50] [07_first_letter_variable.sh:113] -[D] result   end 50.032538
+[2025/10/01:17:21:03] [07_first_letter_variable.sh:238] -[I] start 41888
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:227] -[I] start
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 72] -[I] OK => Same length 17 
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 79] -[D] 1759332063.714905
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 0
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 0 Digit of a number equal     1 :: 1
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 1
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 1 Digit of a number equal     7 :: 7
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 2
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 2 Digit of a number equal     5 :: 5
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 3
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 3 Digit of a number equal     9 :: 9
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 4
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 4 Digit of a number equal     3 :: 3
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 5
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 5 Digit of a number equal     3 :: 3
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 6
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 6 Digit of a number equal     2 :: 2
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 7
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 7 Digit of a number equal     0 :: 0
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 8
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 8 Digit of a number equal     6 :: 6
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 9
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 99] -[D] Iter = 9 Digit of a number NOT equal 3 :: 4 => write to different array
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:105] -[I] enter digit to array start=3 , end=4
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 10
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 99] -[D] Iter = 10 Digit of a number NOT equal . :: . => write to different array
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:105] -[I] enter digit to array start=. , end=.
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 11
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 11 Digit of a number equal     7 :: 7
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:105] -[I] enter digit to array start=7 , end=7
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 12
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 12 Digit of a number equal     1 :: 1
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:105] -[I] enter digit to array start=1 , end=1
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 13
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 99] -[D] Iter = 13 Digit of a number NOT equal 4 :: 6 => write to different array
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:105] -[I] enter digit to array start=4 , end=6
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 14
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 99] -[D] Iter = 14 Digit of a number NOT equal 9 :: 2 => write to different array
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:105] -[I] enter digit to array start=9 , end=2
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 15
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 99] -[D] Iter = 15 Digit of a number NOT equal 0 :: 1 => write to different array
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:105] -[I] enter digit to array start=0 , end=1
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 16
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 99] -[D] Iter = 16 Digit of a number NOT equal 5 :: 6 => write to different array
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:105] -[I] enter digit to array start=5 , end=6
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 17
+[2025/10/01:17:21:04] [07_first_letter_variable.sh: 97] -[D] Iter = 17 Digit of a number equal      :: 
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:105] -[I] enter digit to array start= , end=
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:118] -[D] result start 3.714905
+[2025/10/01:17:21:04] [07_first_letter_variable.sh:119] -[D] result   end 4.716216
+[2025/10/01:17:21:59] [07_first_letter_variable.sh:238] -[I] start 42257
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:227] -[I] start
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 72] -[I] OK => Same length 17 
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 79] -[D] 1759332119.131570
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 0
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 0 Digit of a number equal     1 :: 1
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 1
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 1 Digit of a number equal     7 :: 7
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 2
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 2 Digit of a number equal     5 :: 5
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 3
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 3 Digit of a number equal     9 :: 9
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 4
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 4 Digit of a number equal     3 :: 3
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 5
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 5 Digit of a number equal     3 :: 3
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 6
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 6 Digit of a number equal     2 :: 2
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 7
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 7 Digit of a number equal     1 :: 1
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 8
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 99] -[D] Iter = 8 Digit of a number NOT equal 1 :: 2 => write to different array
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start=1 , end=2
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 9
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 99] -[D] Iter = 9 Digit of a number NOT equal 9 :: 0 => write to different array
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start=9 , end=0
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 10
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 89] -XXXXXXXXXXXXXXXX [D] point detect
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 99] -[D] Iter = 10 Digit of a number NOT equal . :: . => write to different array
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start=. , end=.
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 11
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 11 Digit of a number equal     1 :: 1
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start=1 , end=1
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 12
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 12 Digit of a number equal     3 :: 3
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start=3 , end=3
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 13
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 99] -[D] Iter = 13 Digit of a number NOT equal 1 :: 2 => write to different array
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start=1 , end=2
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 14
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 99] -[D] Iter = 14 Digit of a number NOT equal 5 :: 8 => write to different array
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start=5 , end=8
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 15
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 99] -[D] Iter = 15 Digit of a number NOT equal 7 :: 0 => write to different array
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start=7 , end=0
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 16
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 99] -[D] Iter = 16 Digit of a number NOT equal 0 :: 8 => write to different array
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start=0 , end=8
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 17
+[2025/10/01:17:22:00] [07_first_letter_variable.sh: 97] -[D] Iter = 17 Digit of a number equal      :: 
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:105] -[I] enter digit to array start= , end=
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:118] -[D] result start 19.131570
+[2025/10/01:17:22:00] [07_first_letter_variable.sh:119] -[D] result   end 20.132808
+[2025/10/01:17:35:41] [07_first_letter_variable.sh:241] -[I] start 43265
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:230] -[I] start
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 72] -[I] OK => Same length 17 
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 79] -[D] 1759332941.438260
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 0
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 1
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 2
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 3
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 4
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 5
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 6
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 7
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 8
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 9
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 10
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 89] -XXXXXXXXXXXXXXXX [D] point detect
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:100] -[D] Iter = 10 Digit of a number NOT equal . :: . => write to different array
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:108] -[I] enter digit to array start=. , end=.
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 11
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:108] -[I] enter digit to array start=4 , end=4
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 12
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:108] -[I] enter digit to array start=3 , end=3
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 13
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:108] -[I] enter digit to array start=8 , end=9
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 14
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:108] -[I] enter digit to array start=2 , end=5
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 15
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:108] -[I] enter digit to array start=6 , end=1
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 16
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:108] -[I] enter digit to array start=0 , end=8
+[2025/10/01:17:35:42] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 17
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:108] -[I] enter digit to array start= , end=
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:121] -[D] result start .438260
+[2025/10/01:17:35:42] [07_first_letter_variable.sh:122] -[D] result   end .439518
+[2025/10/01:17:37:28] [07_first_letter_variable.sh:242] -[I] start 43702
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:231] -[I] start
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 72] -[I] OK => Same length 17 
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 79] -[D] 1759333048.200549
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 0
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 1
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 2
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 3
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 4
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 5
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 6
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 7
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 8
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 9
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 10
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 89] -XXXXXXXXXXXXXXXX [D] point detect
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:100] -[D] Iter = 10 Digit of a number NOT equal . :: . => write to different array
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:108] -[I] enter digit to array start=. , end=.
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 11
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:108] -[I] enter digit to array start=2 , end=2
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 12
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:108] -[I] enter digit to array start=0 , end=0
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 13
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:108] -[I] enter digit to array start=0 , end=2
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 14
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:108] -[I] enter digit to array start=5 , end=0
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 15
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:108] -[I] enter digit to array start=4 , end=9
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 16
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:108] -[I] enter digit to array start=9 , end=2
+[2025/10/01:17:37:29] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 17
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:108] -[I] enter digit to array start= , end=
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:121] -[D] result start .200549
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:122] -[D] result   end .202092
+[2025/10/01:17:37:29] [07_first_letter_variable.sh:234] -[I] end
+[2025/10/01:17:38:27] [07_first_letter_variable.sh:242] -[I] start 43984
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:231] -[I] start
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 72] -[I] OK => Same length 17 
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 79] -[D] 1759333107.618053
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 0
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 0 Digit of a number equal     1 :: 1
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 1
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 1 Digit of a number equal     7 :: 7
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 2
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 2 Digit of a number equal     5 :: 5
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 3
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 3 Digit of a number equal     9 :: 9
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 4
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 4 Digit of a number equal     3 :: 3
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 5
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 5 Digit of a number equal     3 :: 3
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 6
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 6 Digit of a number equal     3 :: 3
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 7
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 7 Digit of a number equal     1 :: 1
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 8
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 8 Digit of a number equal     0 :: 0
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 9
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:100] -[D] Iter = 9 Digit of a number NOT equal 7 :: 8 => write to different array
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:108] -[I] enter digit to array start=7 , end=8
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 10
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 89] -XXXXXXXXXXXXXXXX [D] point detect
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:108] -[I] enter digit to array start=. , end=.
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 11
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 11 Digit of a number equal     6 :: 6
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:108] -[I] enter digit to array start=6 , end=6
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 12
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 12 Digit of a number equal     1 :: 1
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:108] -[I] enter digit to array start=1 , end=1
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 13
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:100] -[D] Iter = 13 Digit of a number NOT equal 8 :: 9 => write to different array
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:108] -[I] enter digit to array start=8 , end=9
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 14
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:100] -[D] Iter = 14 Digit of a number NOT equal 0 :: 3 => write to different array
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:108] -[I] enter digit to array start=0 , end=3
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 15
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:100] -[D] Iter = 15 Digit of a number NOT equal 5 :: 4 => write to different array
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:108] -[I] enter digit to array start=5 , end=4
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 16
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:100] -[D] Iter = 16 Digit of a number NOT equal 3 :: 2 => write to different array
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:108] -[I] enter digit to array start=3 , end=2
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 82] -[D] Iter digit/sign of string 17
+[2025/10/01:17:38:28] [07_first_letter_variable.sh: 98] -[D] Iter = 17 Digit of a number equal      :: 
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:108] -[I] enter digit to array start= , end=
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:121] -[D] result start 7.618053
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:122] -[D] result   end 8.619342
+[2025/10/01:17:38:28] [07_first_letter_variable.sh:234] -[I] end
