@@ -166,6 +166,8 @@ function run () {
 #  missing (µs → ns)
 
 # 1759319054
+# 1759234385204456
+# 1759234385 204 456  second millisecond microsecond
 
 # second
 # 1759234385
