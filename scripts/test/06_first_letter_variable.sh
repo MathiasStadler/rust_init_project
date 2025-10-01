@@ -129,15 +129,16 @@ function log() {
 		echo -e "[$TAG] $*" >>$LOG_FILE
 	else
 		# echo "[$(date +"%Y/%m/%d:%H:%M:%S %z")] [$SCRIPT_NAME][$TAG] $*" | tee -a $LOG_FILE
-		# echo "DEBUG => ${#1}";
+		# PLEASE REMOVE echo "DEBUG => ${#1}";
+		my_space=" "; #place holder for space
 		if [ "${#1}" -eq "1" ]; then
-		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:  $1] - $2" | tee -a $LOG_FILE
+		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "2" ]; then
 		# one more blank whitespace
-		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:  $1] - $2" | tee -a $LOG_FILE
+		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] -$2" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "3" ]; then
 		# one more blank whitespace
-		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME: $1] - $2" | tee -a $LOG_FILE
+		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$1] -$2" | tee -a $LOG_FILE
 		else
 		echo "not handle"
 		fi
