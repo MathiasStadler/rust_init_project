@@ -11,7 +11,7 @@ declare LOG_LEVEL
 
 # not nice but useful
 
-if [[ ! -v LOG_LEVEL ]]; then echo "LOG_LEVEL is NOT set. Set like =>  LOG_LEVEL=info ./<script_name> "; fi
+if [[ ! -v LOG_LEVEL ]]; then echo "LOG_LEVEL is NOT set. Enable log level =>  LOG_LEVEL=info ./<script_name> "; fi
 
 if [[ -v LOG_LEVEL ]]; then echo "LOG_LEVEL is set on => $LOG_LEVEL"; fi
 
@@ -70,9 +70,11 @@ log "${LINENO}" "[I]ERROR Not the same length"
 exit 1;
 fi
 
+
+log "${LINENO}" "[D] $start";
 # iter/loop  over both strings
 for ((i=0; i<=len_start; i++)); do
-log "${LINENO}" "[D] Iter digit/sign of string ${i}"
+log "${LINENO}" "[D] Iter digit/sign of string ${i}";
 sign_start=${start:$i:1};
 sign_end=${end:$i:1};
 # echo "X sign_start $sign_start"
@@ -148,28 +150,41 @@ function log() {
 
 # test only build in commands 
 
+function get_real_time() {
+	# replace all sign except numbers
+	a="${EPOCHREALTIME/[^0-9]/}"
+	return "$a"
+}
+
+
 function run () {
 
 # Unterstützt Unix-Zeitstempel in Sekunden, Millisekunden, Mikrosekunden und Nanosekunden.
 # https://timestamp.toolify.cc/de/
 # 1759231287
 
-#
-# 1759144852061
-# second
-# 1759144852
-# milles seconds
-# 1759144852061
-# nano second
-# 1759144852061815
+#  missing (µs → ns)
+
+# 1759319054
 
 # second
 # 1759234385
 # milles
 # 175923438520
+# microseconds
+# 17592343852044
 # nano 
 # 1759234385204456 
 
+# 1759319175
+# 1759319375938969
+# 1759319175.950205
+
+# https://www.gut-erklaert.de/images/mathematik/zehnerpotenzen-kleine-zahlen-mit-praefix.png
+# milles 10^3 0.001 (mm)
+# micro 10^6 = 0.000 001 (µs)
+# nano 10^9 = 0.000 000 001 (ns)
+# piko 10^12 = 0.000 000 000 001 
 
 #micro-second granularity: $EPOCHREALTIME
 # FOUND HERE https://unix.stackexchange.com/questions/69322/how-to-get-milliseconds-since-unix-epoch

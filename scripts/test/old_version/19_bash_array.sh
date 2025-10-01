@@ -101,6 +101,7 @@ function handle_error() {
 }
 
 function get_real_time() {
+	# replace all sign except numbers
 	a="${EPOCHREALTIME/[^0-9]/}"
 	return "$a"
 }
