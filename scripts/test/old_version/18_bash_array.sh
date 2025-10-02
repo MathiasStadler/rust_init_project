@@ -74,6 +74,9 @@ LOG_FILE="script.log"
 # start log
 function log() {
 
+SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}" )"
+echo "script name => $SCRIPT_NAME";
+
 	# arg1 = line number
 	# arg2 = message
 

@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# shellcheck shell=bash
+#shellcheck shell=bash
 
 # set -x
 
@@ -155,19 +155,23 @@ function log() {
 	# if [ ${#1} -eq 1 ]; then
 	# SCRIPT_NAME=$(/usr/bin/basename "${BASH_SOURCE[@]}") || exit 100
 
-	
-
 	if [ "$HIDE_LOG" ]; then
 		echo -e "[$TAG] $*" >>$LOG_FILE
 	else
 
 		my_space=" " #place holder for space
 		if [ "${#1}" -eq "1" ]; then
+			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
+			# printf
 			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "2" ]; then
+			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
+			# printf
 			# one more blank whitespace
 			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] -$2" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "3" ]; then
+			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
+			# printf 
 			# one more blank whitespace
 			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$1] -$2" | tee -a $LOG_FILE
 		else
@@ -240,22 +244,23 @@ function run() {
 	#test case
 	# sleep 1
 	end="$EPOCHREALTIME"
-	log "${LINENO}" "[I] start"
+	# double
+	# log "${LINENO}" "[I] start"
 	calc_different "$start" "$end"
-
-	
 
 	return 0
 }
 
 function main() {
 
-	SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}" )"
+	SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}")"
 	FULL_PATH=$(/usr/bin/realpath "${BASH_SOURCE[0]}")
-	log "${LINENO}" "[I] full path => $FULL_PATH";
+	# log "${LINENO}" "[I] full path => $FULL_PATH"
 	# echo "script name => $SCRIPT_NAME";
 
-	log "${LINENO}" "[I] start $$"
+	log "${LINENO}" "[I] Script start =>  $SCRIPT_NAME - PID => $$"
+	log "${LINENO}" "[I] Installation folder => $FULL_PATH"
+	log "${LINENO}" "[I] Execute folder $(pwd)"
 	run || exit_handler
 	log "${LINENO}" "[I] end"
 }
@@ -267,6 +272,8 @@ main
 
 # shfmt -w 08_first_letter_variable.sh
 
+# shfmt -ln=bash --write  10_first_letter_variable.sh
+
 # shfmt -ln=bash -w 08_first_letter_variable.sh
 
 ## --write
@@ -274,3 +281,7 @@ main
 ## --minify
 
 # shfmt -ln=bash --write --simplify --minify 09_first_letter_variable.sh
+
+# "shellcheck these script"
+# "shellcheck -a 10_first_letter_variable.sh"
+
