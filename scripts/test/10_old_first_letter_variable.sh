@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 #shellcheck shell=bash
 
+# set -x
 
+# set -o errexit
 
 # FOUND HERE  https://www.redhat.com/en/blog/bash-error-handling
 set -o errtrace # Enable the err trap, code will get called when an error is detected
@@ -25,6 +27,9 @@ if [[ -v LOG_LEVEL ]]; then echo "LOG_LEVEL is set on => $LOG_LEVEL"; fi
 # calculate the difference from two floating point numbers in plain bash
 # Sorry wrong english
 # in plain bash function detect different - Since the function diff / awk / bc  doesn't exist in plain bash
+
+# double
+# trap "handle_error;exit 1" ERR
 
 # FOUND HERE - https://linuxsimply.com/bash-scripting-tutorial/error-handling-and-debugging/error-handling/trap-err/
 function handle_error() {
@@ -140,13 +145,10 @@ LOG_FILE="script.log"
 # start log
 function log() {
 
-	
-
 	# caller from which function
 	local caller="${FUNCNAME[1]}"
 
 	# arg1 = line number
-	# arg2 = Level
 	# arg2 = message
 	# FOUND HERE - https://stackoverflow.com/questions/17804007/how-to-show-line-number-when-executing-bash-script
 
@@ -176,7 +178,7 @@ function log() {
 			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
 			# printf
 			# one more blank whitespace
-			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$caller:$my_space$1] - [ $2 ] $3" | tee -a $LOG_FILE
+			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$caller:$my_space$1] -$2" | tee -a $LOG_FILE
 		else
 			echo "not handle"
 		fi
@@ -258,36 +260,15 @@ function main() {
 
 	SCRIPT_NAME="$(/usr/bin/basename "${BASH_SOURCE[0]}")"
 	FULL_PATH=$(/usr/bin/realpath "${BASH_SOURCE[0]}")
+	# log "${LINENO}" "[I] full path => $FULL_PATH"
+	# echo "script name => $SCRIPT_NAME";
 
-	# SHOW LOG_LEVEL - https://logging.apache.org/log4j/2.x/javadoc/log4j-api/org/apache/logging/log4j/Level.html#FATAL
-	log "${LINENO}" "FATAL" "A fatal event that will prevent the application from continuing"
-	log "${LINENO}" "ERROR" "An error in the application, possibly recoverable"
-	log "${LINENO}" "WARN " "An event that might possible lead to an error"
-	log "${LINENO}" "INFO " "An event for informational purposes"
-	log "${LINENO}" "DEBUG" "A general debugging event"
-	log "${LINENO}" "TRACE" "A fine-grained debug message, typically capturing the flow through the application"
+	log "${LINENO}" "[I] Script start =>  $SCRIPT_NAME - PID => $$"
+	log "${LINENO}" "[I] Installation folder => $FULL_PATH"
+	log "${LINENO}" "[I] Execute in folder => $(pwd)"
 	
-	log "${LINENO}" "INFO " "[I] Script start =>  $SCRIPT_NAME - PID => $$"
-	# PLEASE DON'T activate
-	# log "${LINENO}" "[I] Installation folder FULL PATH =>  $("$FULL_PATH")"
-	log "${LINENO}" "ERROR" "[I] Installation folder =>  $(dirname "$FULL_PATH")" 
-	log "${LINENO}" "DEBUG" "Execute in folder => $(pwd)"
-	log "${LINENO}" "TRACE" "Execute in folder => $(pwd)"
+	cd /nonsense
 	
-	# https://stackoverflow.com/questions/15678796/how-do-i-suppress-shell-script-error-messages
-	# cd /nonsense | handle_error
-	
-	# FOUND HERE
-	# https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
-	# white="tput setaf 7"
-	# red="tput setaf 1"
-	# green="tput setaf 2"
-	# reset="tput sgr0"
-	# echo "${red}red text ${green}green ${white}text${reset}"
-	# echo "$($red) red text $($green) green text$(${reset})"
-
-	log "${LINENO}" "[E] $(tput setaf 1)Hello, world$(tput sgr0)"
-
 	run || exit_handler
 	log "${LINENO}" "[I] end"
 }
