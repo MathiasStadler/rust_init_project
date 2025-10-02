@@ -5142,3 +5142,122 @@ Error occurred on line 144: end (exit code: 127)
 [2025/10/02:12:43:00] [10_first_letter_variable.sh:131] -[D] result start .927881
 [2025/10/02:12:43:00] [10_first_letter_variable.sh:132] -[D] result   end .927884
 [2025/10/02:12:43:00] [10_first_letter_variable.sh:265] -[I] end
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:261] -[I] Script start =>  10_first_letter_variable.sh - PID => 24967
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:262] -[I] Installation folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test/10_first_letter_variable.sh
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:263] -[I] Execute folder /var/trapapa_workspce_codium/rust_init_project/scripts/test
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 78] -[I] OK => Same length 17 
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 84] -[D] 1759402176.113338
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 0
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 0 Digit of a number equal     1 :: 1
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 1
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 1 Digit of a number equal     7 :: 7
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 2
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 2 Digit of a number equal     5 :: 5
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 3
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 3 Digit of a number equal     9 :: 9
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 4
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 4 Digit of a number equal     4 :: 4
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 5
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 5 Digit of a number equal     0 :: 0
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 6
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 6 Digit of a number equal     2 :: 2
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 7
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 7 Digit of a number equal     1 :: 1
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 8
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 8 Digit of a number equal     7 :: 7
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 9
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 9 Digit of a number equal     6 :: 6
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 10
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 93] -XXXXXXXXXXXXXXXX [D] point detect
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:115] -[I] enter digit to array start=. , end=.
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 11
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 11 Digit of a number equal     1 :: 1
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:115] -[I] enter digit to array start=1 , end=1
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 12
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 12 Digit of a number equal     1 :: 1
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:115] -[I] enter digit to array start=1 , end=1
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 13
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 13 Digit of a number equal     3 :: 3
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:115] -[I] enter digit to array start=3 , end=3
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 14
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 14 Digit of a number equal     3 :: 3
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:115] -[I] enter digit to array start=3 , end=3
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 15
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:103] -[D] Iter = 15 Digit of a number NOT equal 3 :: 4 => write to different array
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:115] -[I] enter digit to array start=3 , end=4
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 16
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:103] -[D] Iter = 16 Digit of a number NOT equal 8 :: 1 => write to different array
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:115] -[I] enter digit to array start=8 , end=1
+[2025/10/02:12:49:36] [10_first_letter_variable.sh: 87] -[D] Iter digit/sign of string 17
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:101] -[D] Iter = 17 Digit of a number equal      :: 
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:115] -[I] enter digit to array start= , end=
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:131] -[D] result start .113338
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:132] -[D] result   end .113341
+[2025/10/02:12:49:36] [10_first_letter_variable.sh:265] -[I] end
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:264] -[I] Script start =>  10_first_letter_variable.sh - PID => 25473
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:265] -[I] Installation folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test/10_first_letter_variable.sh
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:266] -[I] Execute in folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 81] -[I] OK => Same length 17 
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 87] -[D] 1759402441.217789
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 0
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 0 Digit of a number equal     1 :: 1
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 1
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 1 Digit of a number equal     7 :: 7
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 2
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 2 Digit of a number equal     5 :: 5
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 3
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 3 Digit of a number equal     9 :: 9
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 4
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 4 Digit of a number equal     4 :: 4
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 5
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 5 Digit of a number equal     0 :: 0
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 6
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 6 Digit of a number equal     2 :: 2
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 7
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 7 Digit of a number equal     4 :: 4
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 8
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 8 Digit of a number equal     4 :: 4
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 9
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 9 Digit of a number equal     1 :: 1
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 10
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 96] -XXXXXXXXXXXXXXXX [D] point detect
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:118] -[I] enter digit to array start=. , end=.
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 11
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 11 Digit of a number equal     2 :: 2
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:118] -[I] enter digit to array start=2 , end=2
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 12
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 12 Digit of a number equal     1 :: 1
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:118] -[I] enter digit to array start=1 , end=1
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 13
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 13 Digit of a number equal     7 :: 7
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:118] -[I] enter digit to array start=7 , end=7
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 14
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 14 Digit of a number equal     7 :: 7
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:118] -[I] enter digit to array start=7 , end=7
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 15
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:106] -[D] Iter = 15 Digit of a number NOT equal 8 :: 9 => write to different array
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:118] -[I] enter digit to array start=8 , end=9
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 16
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:106] -[D] Iter = 16 Digit of a number NOT equal 9 :: 2 => write to different array
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:118] -[I] enter digit to array start=9 , end=2
+[2025/10/02:12:54:01] [10_first_letter_variable.sh: 90] -[D] Iter digit/sign of string 17
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:104] -[D] Iter = 17 Digit of a number equal      :: 
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:118] -[I] enter digit to array start= , end=
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:134] -[D] result start .217789
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:135] -[D] result   end .217792
+[2025/10/02:12:54:01] [10_first_letter_variable.sh:268] -[I] end
+[2025/10/02:12:54:29] [10_first_letter_variable.sh:264] -[I] Script start =>  10_first_letter_variable.sh - PID => 25733
+[2025/10/02:12:54:29] [10_first_letter_variable.sh:265] -[I] Installation folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test/10_first_letter_variable.sh
+[2025/10/02:12:54:29] [10_first_letter_variable.sh:266] -[I] Execute in folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test
+[2025/10/02:12:58:10] [10_first_letter_variable.sh:263] -[I] Script start =>  10_first_letter_variable.sh - PID => 26057
+[2025/10/02:12:58:10] [10_first_letter_variable.sh:264] -[I] Installation folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test/10_first_letter_variable.sh
+[2025/10/02:12:58:10] [10_first_letter_variable.sh:265] -[I] Execute in folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test
+[2025/10/02:12:58:10] [10_first_letter_variable.sh: 48] -[E] Error occurred on line 267: cd /nonsense (exit code: 1)
+[2025/10/02:13:24:52] [10_first_letter_variable.sh:266] -[I] Script start =>  10_first_letter_variable.sh - PID => 48413
+[2025/10/02:13:24:52] [10_first_letter_variable.sh:267] -[I] Installation folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test/10_first_letter_variable.sh
+[2025/10/02:13:24:52] [10_first_letter_variable.sh:268] -[I] Execute in folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test
+[2025/10/02:13:24:52] [10_first_letter_variable.sh:handle_error: 48] -[E] Error occurred on line 270: cd /nonsense (exit code: 1)
+[2025/10/02:13:25:48] [10_first_letter_variable.sh:main: 266] -[I] Script start =>  10_first_letter_variable.sh - PID => 48487
+[2025/10/02:13:25:48] [10_first_letter_variable.sh:main: 267] -[I] Installation folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test/10_first_letter_variable.sh
+[2025/10/02:13:25:48] [10_first_letter_variable.sh:main: 268] -[I] Execute in folder => /var/trapapa_workspce_codium/rust_init_project/scripts/test
+[2025/10/02:13:25:48] [10_first_letter_variable.sh:handle_error: 48] -[E] Error occurred on line 270: cd /nonsense (exit code: 1)

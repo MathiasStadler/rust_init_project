@@ -13,6 +13,9 @@ trap "handle_error;exit 1" ERR
 
 declare LOG_LEVEL
 
+
+
+
 # not nice but useful
 
 if [[ ! -v LOG_LEVEL ]]; then echo "LOG_LEVEL is NOT set. Enable log level =>  LOG_LEVEL=info ./<script_name> "; fi
@@ -41,10 +44,9 @@ function handle_error() {
 	local error_command=$BASH_COMMAND
 
 	# Log the error details
-	echo "Error occurred on line $error_line: $error_command (exit code: $error_code)"
-
-	log "[I] Kill  "
-	exit 1
+	# echo "Error occurred on line $error_line: $error_command (exit code: $error_code)"
+	log "${LINENO}" "[E] Error occurred on line $error_line: $error_command (exit code: $error_code)"
+	return 1
 }
 
 # FOUND HERE
@@ -143,6 +145,9 @@ LOG_FILE="script.log"
 # start log
 function log() {
 
+	# caller from which function
+	local caller="${FUNCNAME[1]}"
+
 	# arg1 = line number
 	# arg2 = message
 	# FOUND HERE - https://stackoverflow.com/questions/17804007/how-to-show-line-number-when-executing-bash-script
@@ -168,12 +173,12 @@ function log() {
 			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
 			# printf
 			# one more blank whitespace
-			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] -$2" | tee -a $LOG_FILE
+			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$caller:$my_space$1] -$2" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "3" ]; then
 			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
-			# printf 
+			# printf
 			# one more blank whitespace
-			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$1] -$2" | tee -a $LOG_FILE
+			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$caller:$my_space$1] -$2" | tee -a $LOG_FILE
 		else
 			echo "not handle"
 		fi
@@ -260,7 +265,10 @@ function main() {
 
 	log "${LINENO}" "[I] Script start =>  $SCRIPT_NAME - PID => $$"
 	log "${LINENO}" "[I] Installation folder => $FULL_PATH"
-	log "${LINENO}" "[I] Execute folder $(pwd)"
+	log "${LINENO}" "[I] Execute in folder => $(pwd)"
+	
+	cd /nonsense
+	
 	run || exit_handler
 	log "${LINENO}" "[I] end"
 }
@@ -284,4 +292,3 @@ main
 
 # "shellcheck these script"
 # "shellcheck -a 10_first_letter_variable.sh"
-
