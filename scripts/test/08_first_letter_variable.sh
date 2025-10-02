@@ -20,10 +20,10 @@ if [[ ! -v LOG_LEVEL ]]; then echo "LOG_LEVEL is NOT set. Enable log level =>  L
 
 if [[ -v LOG_LEVEL ]]; then echo "LOG_LEVEL is set on => $LOG_LEVEL"; fi
 
-
+# echo "LOG level is set of $LOG_LEVEL";
 
 # calculate the difference from two floating point numbers in plain bash
-# Sorry for wrong english
+# Sorry wrong english
 # in plain bash function detect different - Since the function diff / awk / bc  doesn't exist in plain bash 
 
 trap "handle_error;exit 1" ERR
@@ -67,7 +67,7 @@ end=$2;
 postdecpos=0;
 
 # let +=1 https://linuxize.com/post/bash-increment-decrement-variable/
-
+# let "postdecpos+=1" 
 
 #1: get the length of strings
 len_start="${#start}";
@@ -125,8 +125,8 @@ fi
 
 done
 
-# r="${ awk '{printf "%.2f\n", $different_start - $different_end}' "
-
+r="$(awk '{printf "%.2f\n', "${different_start[@]}" - "${different_end[@]}")' "
+echo "$r";
 
 
 # convert array to string
@@ -167,8 +167,9 @@ function log() {
 	if [ "$HIDE_LOG" ]; then
 		echo -e "[$TAG] $*" >>$LOG_FILE
 	else
-		my_space=" "; #place holder for whitespace
 		
+		
+		my_space=""; #place holder for space
 		if [ "${#1}" -eq "1" ]; then
 		echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "2" ]; then

@@ -13,12 +13,16 @@
         "Funktion",
         "Ihre",
         "kann",
+        "Mikrosekunden",
+        "Millisekunden",
+        "Nanosekunden",
         "neue",
         "piko",
         "pinage",
         "postdecpos",
         "ptxt",
         "rustup",
+        "Sekunden",
         "shellcheck",
         "strarr",
         "STRG",
@@ -27,8 +31,10 @@
         "Umgebungsvariablen",
         "unsence",
         "unsense",
+        "Unterstützt",
         "Verzeichnis",
-        "workspce"
+        "workspce",
+        "Zeitstempel"
     ],
     "code-runner.fileDirectoryAsCwd": true
 }
