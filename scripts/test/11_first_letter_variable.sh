@@ -286,6 +286,7 @@ function run() {
 }
 
 function check_env(){
+# FOUND HERE - https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script
 
 # type foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; }
 	return 0;
