@@ -10,8 +10,12 @@ trap "handle_error;exit 1" ERR
 #LOG_LEVEL="" <program name>
 
 declare LOG_LEVEL
-
-
+FATAL="FATAL"
+ERROR="ERROR"
+WARN="WARN"
+INFO="INFO"
+DEBUG="DEBUG"
+TRACE="TRACE"
 
 
 # not nice but useful
@@ -72,16 +76,19 @@ function calc_different() {
 
 	#2: check if have the same length
 	if [ "$len_start" = "$len_end" ]; then
-		log "${LINENO}" "[I] OK => Same length $len_start "
+		# log "${LINENO}" $INFO "OK => Same length $len_start"
+		log "${LINENO}" $INFO "An event for informational purposes"
 	else
 		log "${LINENO}" "[I]ERROR Not the same length"
 		exit 1
 	fi
 
-	log "${LINENO}" "[D] $start"
+	log "${LINENO}" $DEBUG "$start"
 	# iter/loop  over both strings
 	for ((i = 0; i <= len_start; i++)); do
-		log "${LINENO}" "[D] Iter digit/sign of string ${i}"
+		# log "${LINENO}" $INFO "Iter digit/sign of string ${i}"
+		log "${LINENO}" $INFO "An event for informational purposes"
+		log "${LINENO}" $INFO "Iter = Digit of a number equal"
 		sign_start=${start:$i:1}
 		sign_end=${end:$i:1}
 
@@ -95,9 +102,9 @@ function calc_different() {
 			# FOUND HERE
 			# https://linuxsimply.com/bash-scripting-tutorial/conditional-statements/if-else/compare-numbers/
 			if [[ "$sign_start" -eq "$sign_end" ]]; then
-				log "${LINENO}" "[D] Iter = $i Digit of a number equal     $sign_start :: $sign_end"
+				log "${LINENO}" $INFO "Iter = $i Digit of a number equal     $sign_start :: $sign_end"
 			else
-				log "${LINENO}" "[D] Iter = $i Digit of a number NOT equal $sign_start :: $sign_end => write to different array"
+				log "${LINENO}" $DEBUG "[D] Iter = $i Digit of a number NOT equal $sign_start :: $sign_end => write to different array"
 				different=0 # different set 0 == true
 
 			fi
@@ -109,7 +116,7 @@ function calc_different() {
 		fi
 
 		if [[ different -eq 0 ]]; then
-			log "${LINENO}" "[I] enter digit to array start=$sign_start , end=$sign_end"
+			log "${LINENO}" $INFO "Enter digit to array start=$sign_start , end=$sign_end"
 			different_start+=("$sign_start")
 			different_end+=("$sign_end")
 		fi
@@ -125,8 +132,8 @@ function calc_different() {
 	result_start=$(printf "%s" "${different_start[@]}")
 	result_end=$(printf "%s" "${different_end[@]}")
 
-	log "${LINENO}" "[D] result start $result_start"
-	log "${LINENO}" "[D] result   end $result_end"
+	log "${LINENO}" $DEBUG "Result start $result_start"
+	log "${LINENO}" $DEBUG "Result end $result_end"
 
 	# dos not work floating point
 	# log "${LINENO}" "[D] result => $(( result_end - result_start )) "
@@ -166,12 +173,12 @@ function log() {
 		if [ "${#1}" -eq "1" ]; then
 			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
 			# printf
-			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
+			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - [ $2 ] $3" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "2" ]; then
 			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
 			# printf
 			# one more blank whitespace
-			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$caller:$my_space$1] -$2" | tee -a $LOG_FILE
+			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$caller:$my_space$1] - [ $2 ] $3" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "3" ]; then
 			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
 			# printf
@@ -260,19 +267,19 @@ function main() {
 	FULL_PATH=$(/usr/bin/realpath "${BASH_SOURCE[0]}")
 
 	# SHOW LOG_LEVEL - https://logging.apache.org/log4j/2.x/javadoc/log4j-api/org/apache/logging/log4j/Level.html#FATAL
-	log "${LINENO}" "FATAL" "A fatal event that will prevent the application from continuing"
-	log "${LINENO}" "ERROR" "An error in the application, possibly recoverable"
-	log "${LINENO}" "WARN " "An event that might possible lead to an error"
-	log "${LINENO}" "INFO " "An event for informational purposes"
-	log "${LINENO}" "DEBUG" "A general debugging event"
-	log "${LINENO}" "TRACE" "A fine-grained debug message, typically capturing the flow through the application"
+	log "${LINENO}" $FATAL "A fatal event that will prevent the application from continuing"
+	log "${LINENO}" $ERROR "An error in the application, possibly recoverable"
+	log "${LINENO}" $WARN  "An event that might possible lead to an error"
+	log "${LINENO}" $INFO "An event for informational purposes"
+	log "${LINENO}" $DEBUG "A general debugging event"
+	log "${LINENO}" $TRACE "A fine-grained debug message, typically capturing the flow through the application"
 	
-	log "${LINENO}" "INFO " "[I] Script start =>  $SCRIPT_NAME - PID => $$"
+	log "${LINENO}" $INFO "Script start =>  $SCRIPT_NAME - PID => $$"
 	# PLEASE DON'T activate
 	# log "${LINENO}" "[I] Installation folder FULL PATH =>  $("$FULL_PATH")"
-	log "${LINENO}" "ERROR" "[I] Installation folder =>  $(dirname "$FULL_PATH")" 
-	log "${LINENO}" "DEBUG" "Execute in folder => $(pwd)"
-	log "${LINENO}" "TRACE" "Execute in folder => $(pwd)"
+	log "${LINENO}" $ERROR "Installation folder =>  $(dirname "$FULL_PATH")" 
+	log "${LINENO}" $DEBUG "Execute in folder => $(pwd)"
+	log "${LINENO}" $TRACE "Execute in folder => $(pwd)"
 	
 	# https://stackoverflow.com/questions/15678796/how-do-i-suppress-shell-script-error-messages
 	# cd /nonsense | handle_error
@@ -286,7 +293,7 @@ function main() {
 	# echo "${red}red text ${green}green ${white}text${reset}"
 	# echo "$($red) red text $($green) green text$(${reset})"
 
-	log "${LINENO}" "[E] $(tput setaf 1)Hello, world$(tput sgr0)"
+	log "${LINENO}" $ERROR "$(tput setaf 1)Hello, world$(tput sgr0)"
 
 	run || exit_handler
 	log "${LINENO}" "[I] end"
