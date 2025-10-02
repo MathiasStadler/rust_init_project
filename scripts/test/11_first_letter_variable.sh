@@ -32,7 +32,7 @@ TRACE="TRACE"
 FATAL="$(tput setaf 1)FATAL$(tput sgr0)"
 ERROR="$(tput setaf 1)ERROR$(tput sgr0)"
 WARN="$(tput setaf 6)WARN$(tput sgr0)"
-# INFO="$(tput setaf 2)INFO$(tput sgr0)"
+INFO="$(tput setaf 2)INFO$(tput sgr0)"
 DEBUG="$(tput setaf 4)DEBUG$(tput sgr0)"
 TRACE="$(tput setaf 0)TRACE$(tput sgr0)"
 # not nice but useful
@@ -283,6 +283,12 @@ function run() {
 	calc_different "$start" "$end"
 
 	return 0
+}
+
+function check_env(){
+
+# type foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; }
+	return 0;
 }
 
 function main() {
