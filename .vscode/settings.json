@@ -12,6 +12,7 @@
         "extdebug",
         "funcstack",
         "Funktion",
+        "gleich",
         "Ihre",
         "kann",
         "Mikrosekunden",
@@ -26,6 +27,7 @@
         "Sekunden",
         "setaf",
         "shellcheck",
+        "Stelle",
         "strarr",
         "STRG",
         "subshell",
@@ -35,7 +37,10 @@
         "unsense",
         "Unterstützt",
         "Verzeichnis",
+        "wann",
+        "welche",
         "workspce",
+        "Zahl",
         "Zeitstempel"
     ],
     "code-runner.fileDirectoryAsCwd": true
