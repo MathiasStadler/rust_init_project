@@ -27,18 +27,12 @@ TRACE="TRACE"
 # cyan      COLOR_CYAN        6     0,max,max
 # white     COLOR_WHITE       7     max,max,max
 
-# FATAL="$(tput setaf 2)INFO(tput sgr0)"
 FATAL="$(tput setaf 1)FATAL$(tput sgr0)"
 ERROR="$(tput setaf 1)ERROR$(tput sgr0)"
 WARN="$(tput setaf 6)WARN$(tput sgr0)"
 INFO="$(tput setaf 2)INFO$(tput sgr0)"
 DEBUG="$(tput setaf 4)DEBUG$(tput sgr0)"
 TRACE="$(tput setaf 0)TRACE$(tput sgr0)"
-# not nice but useful
-
-##
-red=$(echo -e "\033[31m INFO \033[0m")
-echo "$red"
 
 if [[ ! -v LOG_LEVEL ]]; then echo "LOG_LEVEL is NOT set. Enable log level =>  LOG_LEVEL=info ./<script_name> "; fi
 
@@ -75,7 +69,7 @@ function handle_error() {
 different=1 # true = 0, false=1
 
 function calc_different() {
-	# DESC
+	# description 
 
 	# $1 start first floating number as string
 	# $2 end second floating number as string
@@ -94,17 +88,17 @@ function calc_different() {
 	# let "postdecpos+=1"
 
 	#1: get the length of strings
-	len_start="${#start}"
-	len_end="${#end}"
+	# len_start="${#start}"
+	# len_end="${#end}"
 
-	#2: check if have the same length
-	if [ "$len_start" = "$len_end" ]; then
-		# log "${LINENO}" "$INFO" "OK => Same length $len_start"
-		log "${LINENO}" "$INFO" "OK => Same length $len_start - $len_end"
-	else
-		log "${LINENO}" "$INFO" "ERROR Not the same length"
-		exit 1
-	fi
+	# #2: check if have the same length
+	# if [ "$len_start" = "$len_end" ]; then
+	# 	# log "${LINENO}" "$INFO" "OK => Same length $len_start"
+	# 	log "${LINENO}" "$INFO" "OK => Same length $len_start - $len_end"
+	# else
+	# 	log "${LINENO}" "$INFO" "ERROR Not the same length"
+	# 	exit 1
+	# fi
 
 	#3 end - start
 	different=$(awk -v a="${start}" -v b="${end}" 'BEGIN {printf "%.6f\n", b -a }')
@@ -119,8 +113,9 @@ LOG_FILE="script.log"
 # start log
 function log() {
 
-	# caller from which function
-	local caller="${FUNCNAME[1]}"
+	
+#LOG_LEVEL
+#	log 
 
 	# arg1 = line number
 	# arg2 = Level
@@ -161,6 +156,20 @@ function get_now_real_time() {
 
 function run() {
 
+
+	# bash array last element
+	# FOUND HERE - https://unix.stackexchange.com/questions/198787/is-there-a-way-of-reading-the-last-element-of-an-array-with-bash
+	# echo ${a[${#a[@]}-1]}
+	#log "${LINENO}" "$INFO" "These function => ${FUNCNAME[*]} call from ${FUNCNAME[${#FUNCNAME[@]}-1]}"
+
+
+	# caller from which function
+	local function_name="${FUNCNAME[0]}"
+	local function_caller="${FUNCNAME[1]}"
+	# log "${LINENO}" "$INFO" "These function => $function_name"
+	# log "${LINENO}" "$INFO" "Has call from function => $function_caller"
+	log "${LINENO}" "$INFO" "Call path => $function_caller:$function_name"
+
 	# Unterstützt Unix-Zeitstempel in Sekunden, Millisekunden, Mikrosekunden und Nanosekunden.
 	# https://timestamp.toolify.cc/de/
 	# 1759231287
@@ -199,7 +208,7 @@ function run() {
 function check_env() {
 	# FOUND HERE - https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script
 
-	# type foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; }
+	type foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; }
 	return 0
 }
 
@@ -238,8 +247,9 @@ function main() {
 
 	log "${LINENO}" "$ERROR" "$(tput setaf 1)ERROR$(tput sgr0)"
 
-	run || exit_handler
-	log "${LINENO}" "[I] end"
+	check_env || handle_error
+	run || handle_error
+	log "${LINENO}" "$INFO" "[I] end"
 }
 
 main
