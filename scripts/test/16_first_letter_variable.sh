@@ -3,7 +3,6 @@
 
 # AWK solution
 
-
 # FOUND HERE  https://www.redhat.com/en/blog/bash-error-handling
 set -o errtrace # Enable the err trap, code will get called when an error is detected
 trap "handle_error;exit 1" ERR
@@ -28,7 +27,6 @@ TRACE="TRACE"
 # cyan      COLOR_CYAN        6     0,max,max
 # white     COLOR_WHITE       7     max,max,max
 
-
 # FATAL="$(tput setaf 2)INFO(tput sgr0)"
 FATAL="$(tput setaf 1)FATAL$(tput sgr0)"
 ERROR="$(tput setaf 1)ERROR$(tput sgr0)"
@@ -41,9 +39,6 @@ TRACE="$(tput setaf 0)TRACE$(tput sgr0)"
 ##
 red=$(echo -e "\033[31m INFO \033[0m")
 echo "$red"
-
-
-
 
 if [[ ! -v LOG_LEVEL ]]; then echo "LOG_LEVEL is NOT set. Enable log level =>  LOG_LEVEL=info ./<script_name> "; fi
 
@@ -92,9 +87,8 @@ function calc_different() {
 	log "${LINENO}" "$DEBUG" "Method argument start =>${start}"
 	log "${LINENO}" "$DEBUG" "Method argument end   =>${end}"
 
-
 	# post decimal positions https://www.linguee.de/englisch-deutsch/uebersetzung/post+decimal+positions.html
-	postdecpos=0
+	# postdecpos=0
 
 	# let +=1 https://linuxize.com/post/bash-increment-decrement-variable/
 	# let "postdecpos+=1"
@@ -108,146 +102,15 @@ function calc_different() {
 		# log "${LINENO}" "$INFO" "OK => Same length $len_start"
 		log "${LINENO}" "$INFO" "OK => Same length $len_start - $len_end"
 	else
-		log "${LINENO}"  "$INFO" "ERROR Not the same length"
+		log "${LINENO}" "$INFO" "ERROR Not the same length"
 		exit 1
 	fi
 
 	#3 end - start
-	different=$( awk -v a="${start}" -v b="${end}" 'BEGIN {printf "%.6f\n", b -a }' )
+	different=$(awk -v a="${start}" -v b="${end}" 'BEGIN {printf "%.6f\n", b -a }')
 	log "${LINENO}" "$DEBUG" " XXX!!!!! $different"
 
-# 	log "${LINENO}" "$DEBUG" "end   =>$end"
-# 	log "${LINENO}" "$DEBUG" "start =>$start"
-
-# 	# test out up to when which digit of the number is equal
-# 	# german - bis wann welche Stelle der Zahl gleich ist
-# 	for ((i = 0; i <= len_start; i++)); do
-# 		log "${LINENO}" "$DEBUG" "Loop iter => ${i}"
-# 		fw_sign_start=${start:$i:1}
-# 		fw_sign_end=${end:$:1}
-
-# 		#point detection
-# 		if [[ "$fw_sign_start" = "." ]]; then
-# 			log "${LINENO}" "$TRACE" "point detect"
-# 			different=0 # different set 0 == true
-# 		else
-# 			# echo "X sign_start $sign_start"
-# 			# echo "X sign_end $sign_end"
-# 			# FOUND HERE
-# 			# https://linuxsimply.com/bash-scripting-tutorial/conditional-statements/if-else/compare-numbers/
-# 			if [[ "$fw_sign_start" -eq "$fw_sign_end" ]]; then
-# 				log "${LINENO}" "$INFO" "Iter = $i Digit of a number equal     $fw_sign_start :: $fw_sign_end"
-				
-# 			# PLACEHOLDER can remove
-# 			# log "${LINENO}" "$DEBUG" "space"
-
-# 			else
-# 				log "${LINENO}" "$DEBUG" "Iter = $i Digit of a number NOT equal $sign_start :: $sign_end => write to different array"
-# 				# different=0 # different set 0 == true
-# 			fi
-# 		fi
-
-# 	done
-
-
-# 	# iter/loop  over both strings
-# 	# for ((i = 0; i <= len_start; i++)); do
-# 	#reverse
-# 	for ((i = 0; i <= len_start; i++)); do
-# 		# reverse iterator
-# 		# !TODO not nice
-# 		r=$((len_start - i - 1))
-# 		log "${LINENO}" "$DEBUG" "Loop iter reverse  §(($len_start - $i)) => ${r}"
-# 		# log "${LINENO}" "$INFO" "Iter digit/sign of string ${i}"
-# 		# log "${LINENO}" "$INFO" "An event for informational purposes"
-# 		# double
-# 		# log "${LINENO}" "$INFO" "Iter ${i} = Digit of a number equal"
-# 		# sign_start=${start:$i:1}
-# 		# sign_end=${end:$i:1}
-
-# 		# log "${LINENO}" "$INFO" "Iter ${i} = Digit of a number equal ${sign_start} ${sign_end} "
-
-# 		sign_start=${start:$r:1}
-# 		sign_end=${end:$r:1}
-
-# 		log "${LINENO}" "$INFO" "Reverse Iter ${i} = Digit of a number equal ${sign_start} ${sign_end} "
-
-# 		#point detection
-# 		if [[ "$sign_start" = "." ]]; then
-# 			log "${LINENO}" "$TRACE" "point detect"
-# 			different=0 # different set 0 == true
-# 		else
-# 			# echo "X sign_start $sign_start"
-# 			# echo "X sign_end $sign_end"
-# 			# FOUND HERE
-# 			# https://linuxsimply.com/bash-scripting-tutorial/conditional-statements/if-else/compare-numbers/
-# 			if [[ "$sign_start" -eq "$sign_end" ]]; then
-# 				log "${LINENO}" "$INFO" "Iter = $i Digit of a number equal     $sign_start :: $sign_end"
-				
-# 			# PLACEHOLDER can remove
-# 			# log "${LINENO}" "$DEBUG" "space"
-
-# 			else
-# 				log "${LINENO}" "$DEBUG" "Iter = $i Digit of a number NOT equal $sign_start :: $sign_end => write to different array"
-# 				different=0 # different set 0 == true
-# 			fi
-# 		fi
-
-# 		if [[ "$postdecpos" -lt 0 ]]; then
-# 			log "${LINENO}" "count the post decimal position $postdecpos"
-# 		fi
-
-# 		if [[ different -eq 0 ]]; then
-# 			# log "${LINENO}" "$INFO" "Enter digit to array start=$sign_start , end=$sign_end"
-# 			different_start+=("$sign_start")
-# 			different_end+=("$sign_end")
-# 		fi
-
-# 	done
-
-# 	# FOUND HERE - https://www.cyberciti.biz/faq/bash-scripting-using-awk/
-# 	# echo|awk '{ system("date")}'
-
-# 	# echo|awk '{ echo "hello awk"}'
-# 	# awk -v a="$a" -v b="$b" 'BEGIN {printf a,b}'
-
-# 	# FOUND HERE - https://www.baeldung.com/linux/awk-use-shell-variables
-# 	# var='1234567890'
-#  	# awk 'BEGIN { print "shell_var='"$var"'" }'
-
-# 	# works
-# 	# a= 1.123
-# 	# awk -v a="$a" -v b="$b" 'BEGIN {printf "%.3f\n", b}'
-
-# 	# works
-# 	# $a=100
-# 	# $b=1.123
-# 	# awk -v a="$a" -v b="$b" 'BEGIN {printf "%.2f\n", a - b}'
-
-# 	# r="$(awk '{printf "%.2f\n', "${different_start[@]}" - "${different_end[@]}")' "
-
-# 	# log "${LINENO}" "$DEBUG" " XXXXX start ${different_start[*]}"
-# 	#log "${LINENO}" "$DEBUG" " XXXXX end   ${different_end[*]}"
-
-# 	different=$( awk -v a="${different_start[*]}" -v b="${different_end[*]}" 'BEGIN {printf "%.6f\n", a - b}' )
-
-# 	log "${LINENO}" "$DEBUG" " XXXXX $different"
-
-# 	# echo "$r";
-
-# 	# convert array to string b=
-# 	# FOUND HERE
-# 	# https://bashcommands.com/bash-array-to-string
-# 	result_start=$(printf "%s" "${different_start[@]}")
-# 	result_end=$(printf "%s" "${different_end[@]}")
-
-# 	log "${LINENO}" "$DEBUG" "Result start $result_start"
-# 	log "${LINENO}" "$DEBUG" "Result end   $result_end"
-
-# 	# dos not work floating point
-# 	# log "${LINENO}" "[D] result => $(( result_end - result_start )) "
-
-# 	return 0
+	return 0
 } # end of function
 
 TAG="-"
@@ -255,8 +118,6 @@ LOG_FILE="script.log"
 
 # start log
 function log() {
-
-	
 
 	# caller from which function
 	local caller="${FUNCNAME[1]}"
@@ -280,18 +141,10 @@ function log() {
 
 		my_space=" " #place holder for space
 		if [ "${#1}" -eq "1" ]; then
-			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
-			# printf
 			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - [ $2 ] $3" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "2" ]; then
-			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
-			# printf
-			# one more blank whitespace
 			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$caller:$my_space$1] - [ $2 ] $3" | tee -a $LOG_FILE
 		elif [ "${#1}" -eq "3" ]; then
-			# org echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$my_space$1] - $2" | tee -a $LOG_FILE
-			# printf
-			# one more blank whitespace
 			echo "[$(date +"%Y/%m/%d:%H:%M:%S")] [$SCRIPT_NAME:$caller:$1] - [ $2 ] $3" | tee -a $LOG_FILE
 		else
 			echo "not handle"
@@ -300,9 +153,7 @@ function log() {
 }
 # end function log
 
-# test only build in commands
-
-function get_real_time() {
+function get_now_real_time() {
 	# replace all sign except numbers
 	a="${EPOCHREALTIME/[^0-9]/}"
 	return "$a"
@@ -314,24 +165,7 @@ function run() {
 	# https://timestamp.toolify.cc/de/
 	# 1759231287
 
-	#  missing (µs → ns)
-
-	# 1759319054
-	# 1759234385204456
 	# 1759234385 204 456  second millisecond microsecond
-
-	# second
-	# 1759234385
-	# milles
-	# 175923438520
-	# microseconds
-	# 17592343852044
-	# nano
-	# 1759234385204456
-
-	# 1759319175
-	# 1759319375938969
-	# 1759319175.950205
 
 	# https://www.gut-erklaert.de/images/mathematik/zehnerpotenzen-kleine-zahlen-mit-praefix.png
 	# milles 10^3 0.001 (mm)
@@ -351,30 +185,22 @@ function run() {
 	# with point
 	# printf " ${EPOCHREALTIME} \n ${EPOCHREALTIME//.} \n\n"
 
-	# test case
-	start="$EPOCHREALTIME"
-	#end="1759144852062444";
-
-	# REMOVE
-	# calc_different()
-	# calc_different(start, end)
-
+    # second. millisecond microsecond
+	# sec.00000000
 	start="$EPOCHREALTIME"
 	#test case
 	sleep 1
 	end="$EPOCHREALTIME"
-	# double
-	# log "${LINENO}" "[I] start"
 	calc_different "$start" "$end"
 
 	return 0
 }
 
-function check_env(){
-# FOUND HERE - https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script
+function check_env() {
+	# FOUND HERE - https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script
 
-# type foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; }
-	return 0;
+	# type foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; }
+	return 0
 }
 
 function main() {
@@ -385,21 +211,22 @@ function main() {
 	# SHOW LOG_LEVEL - https://logging.apache.org/log4j/2.x/javadoc/log4j-api/org/apache/logging/log4j/Level.html#FATAL
 	log "${LINENO}" "$FATAL" "A fatal event that will prevent the application from continuing"
 	log "${LINENO}" "$ERROR" "An error in the application, possibly recoverable"
-	log "${LINENO}" "$WARN"  "An event that might possible lead to an error"
+	log "${LINENO}" "$WARN" "An event that might possible lead to an error"
 	log "${LINENO}" "$INFO" "An event for informational purposes"
 	log "${LINENO}" "$DEBUG" "A general debugging event"
 	log "${LINENO}" "$TRACE" "A fine-grained debug message, typically capturing the flow through the application"
-	
+
 	log "${LINENO}" "$INFO" "Running =>  $SCRIPT_NAME - PID => $$"
 	# PLEASE DON'T activate
 	# log "${LINENO}" "[I] Installation folder FULL PATH =>  $("$FULL_PATH")"
-	log "${LINENO}" "$ERROR" "Folder of script =>  $(dirname "$FULL_PATH")" 
+	log "${LINENO}" "$ERROR" "Folder of script =>  $(dirname "$FULL_PATH")"
 	log "${LINENO}" "$DEBUG" "Execute folder => $(pwd)"
 	log "${LINENO}" "$TRACE" "Execute folder => $(pwd)"
-	
+
 	# https://stackoverflow.com/questions/15678796/how-do-i-suppress-shell-script-error-messages
 	# cd /nonsense | handle_error
-	
+
+	# bash color
 	# FOUND HERE
 	# https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
 	# white="tput setaf 7"
