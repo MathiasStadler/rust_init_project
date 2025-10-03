@@ -107,6 +107,11 @@ function calc_different() {
 		exit 1
 	fi
 
+	#3 end - start
+	different=$( awk -v a="${start}" -v b="${end}" 'BEGIN {printf "%.6f\n", b -a }' )
+	log "${LINENO}" "$DEBUG" " XXX!!!!! $different"
+
+
 	log "${LINENO}" "$DEBUG" "$start"
 	# iter/loop  over both strings
 	for ((i = 0; i <= len_start; i++)); do
@@ -118,7 +123,7 @@ function calc_different() {
 
 		#point detection
 		if [[ "$sign_start" = "." ]]; then
-			log "${LINENO}" $TRACE "point detect"
+			log "${LINENO}" "$TRACE" "point detect"
 			different=0 # different set 0 == true
 		else
 			# echo "X sign_start $sign_start"
@@ -306,7 +311,7 @@ function run() {
 
 	start="$EPOCHREALTIME"
 	#test case
-	# sleep 1
+	sleep 1
 	end="$EPOCHREALTIME"
 	# double
 	# log "${LINENO}" "[I] start"
