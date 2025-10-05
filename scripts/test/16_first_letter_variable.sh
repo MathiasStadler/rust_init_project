@@ -240,7 +240,7 @@ function check_env() {
 	log "${LINENO}" "$ERROR" "require foo but it's not installed.  Aborting."
 	# !TODO  if it double -> trap EXIT
   	ret=1;;
-esac
+	esac
 
 	log "${LINENO}" "$ERROR" "The command => $1 <= is required for this script, but it is not installed or cannot be called by the script. - Script abort"
 	return "$ret"
