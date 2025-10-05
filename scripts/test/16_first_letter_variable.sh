@@ -7,6 +7,9 @@
 set -o errtrace # Enable the err trap, code will get called when an error is detected
 trap "handle_error;exit 1" ERR
 
+# FOUND HERE - https://linuxconfig.org/bash-script-error-handling-try-catch-in-bash
+exec 2>>error_log.txt
+
 #LOG_LEVEL="" <program name>
 
 declare LOG_LEVEL
@@ -47,6 +50,9 @@ if [[ -v LOG_LEVEL ]]; then echo "LOG_LEVEL is set on => $LOG_LEVEL"; fi
 # FOUND HERE - https://linuxsimply.com/bash-scripting-tutorial/error-handling-and-debugging/error-handling/trap-err/
 function handle_error() {
 
+	local function_name="${FUNCNAME[0]}"
+	local function_caller="${FUNCNAME[1]}"
+	log "${LINENO}" "$ERROR" "Call path => $function_caller:$function_name"
 	# NO function arguments
 	# used - put on start the script
 	# trap handle_error ERR
@@ -58,7 +64,7 @@ function handle_error() {
 
 	# Log the error details
 	# echo "Error occurred on line $error_line: $error_command (exit code: $error_code)"
-	log "${LINENO}" "[E] Error occurred on line $error_line: $error_command (exit code: $error_code)"
+	log "${LINENO}" "[$ERROR] Error occurred on line $error_line: $error_command (exit code: $error_code)"
 	return 1
 }
 
@@ -102,9 +108,11 @@ function calc_different() {
 
 	#3 end - start
 	different=$(awk -v a="${start}" -v b="${end}" 'BEGIN {printf "%.6f\n", b -a }')
-	log "${LINENO}" "$DEBUG" " XXX!!!!! $different"
+	log "${LINENO}" "$DEBUG" " Execute time $different sec"
 
-	return 0
+	#echo to stdout
+	echo different;
+	return  0
 } # end of function
 
 TAG="-"
@@ -113,7 +121,11 @@ LOG_FILE="script.log"
 # start log
 function log() {
 
-	
+# get from function call these here - How to determine function name from inside a function
+# https://stackoverflow.com/questions/1835943/how-to-determine-function-name-from-inside-a-function
+local caller="${FUNCNAME[1]}"
+
+
 #LOG_LEVEL
 #	log 
 
@@ -151,7 +163,9 @@ function log() {
 function get_now_real_time() {
 	# replace all sign except numbers
 	a="${EPOCHREALTIME/[^0-9]/}"
-	return "$a"
+	echo "$a"
+	# return "$a"
+	return 0;
 }
 
 function run() {
@@ -196,20 +210,40 @@ function run() {
 
     # second. millisecond microsecond
 	# sec.00000000
-	start="$EPOCHREALTIME"
+	# start="$EPOCHREALTIME" without sign
+	start=get_now_real_time;
+	
 	#test case
 	sleep 1
-	end="$EPOCHREALTIME"
-	calc_different "$start" "$end"
+	# end="$EPOCHREALTIME"
+	end=get_now_real_time;
+	runtime=(calc_different "$start" "$end") 
+	log "${LINENO}" "$DEBUG" "runtime of ${runtime[0]}" 
 
 	return 0
 }
 
 function check_env() {
+	local function_name="${FUNCNAME[0]}"
+	log "${LINENO}" "$ERROR" "$function_name  => $1 <="
 	# FOUND HERE - https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script
 
-	type foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; }
-	return 0
+	 # type $1 >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; }
+
+	# type "$1" >/dev/null 2>&1 || { echo >&2 "I require foo but it's not installed.  Aborting."; }
+	type "$1"
+	# FOUND HERE - https://www.delftstack.com/de/howto/linux/error-handling-in-bash/
+	case "$?" in
+	0)
+  	ret=0;;
+	*)
+	log "${LINENO}" "$ERROR" "require foo but it's not installed.  Aborting."
+	# !TODO  if it double -> trap EXIT
+  	ret=1;;
+esac
+
+	log "${LINENO}" "$ERROR" "The command => $1 <= is required for this script, but it is not installed or cannot be called by the script. - Script abort"
+	return "$ret"
 }
 
 function main() {
@@ -245,10 +279,15 @@ function main() {
 	# echo "${red}red text ${green}green ${white}text${reset}"
 	# echo "$($red) red text $($green) green text$(${reset})"
 
-	log "${LINENO}" "$ERROR" "$(tput setaf 1)ERROR$(tput sgr0)"
+	# PLEASE REMOVE
+	# log "${LINENO}" "$ERROR" "$(tput setaf 1)ERROR$(tput sgr0)"
 
-	check_env || handle_error
-	run || handle_error
+	# check_env foo|| handle_error
+	# run || handle_error
+
+	check_env foo|| handle_error
+	# run || handle_error
+
 	log "${LINENO}" "$INFO" "[I] end"
 }
 
@@ -268,6 +307,6 @@ main
 ## --minify
 
 # shfmt -ln=bash --write --simplify --minify 09_first_letter_variable.sh
-
+# !NOTE the following comment must be enclosed in quotation marks, otherwise it will be considered an error by shellcheck
 # "shellcheck these script"
 # "shellcheck -a 10_first_letter_variable.sh"
