@@ -26,12 +26,38 @@ if [[ ! -v LOG_LEVEL ]]; then echo "LOG_LEVEL is NOT set. Enable log level =>  L
 # echo which LOG:_LEVEL is set
 if [[ -v LOG_LEVEL ]]; then echo "LOG_LEVEL is set on => $LOG_LEVEL"; fi
 
-FATAL=(0 "$(tput setaf 1)FATAL$(tput sgr0)")
-ERROR=(1 "$(tput setaf 1)ERROR$(tput sgr0)")
-WARN=(2 "$(tput setaf 5)WARN$(tput sgr0)")
-INFO=(3 "$(tput setaf 2)INFO$(tput sgr0)")
-DEBUG=(4 "$(tput setaf 4)DEBUG$(tput sgr0)")
-TRACE=(5 "$(tput setaf 0)TRACE$(tput sgr0)")
+# FOUND HERE - https://www.howtogeek.com/730243/what-are-bash-dictionaries-on-linux-and-how-do-you-use-them/
+declare -A LOG_LEVEL=(
+[FATAL]="$(tput setaf 1)FATAL$(tput sgr0)"
+[ERROR]="$(tput setaf 1)ERROR$(tput sgr0)"
+[WARN]="$(tput setaf 5)WARN$(tput sgr0)"
+[INFO]="$(tput setaf 2)INFO$(tput sgr0)"
+[DEBUG]="$(tput setaf 4)DEBUG$(tput sgr0)"
+[TRACE]="$(tput setaf 0)TRACE$(tput sgr0)"
+)
+
+# # FOUND HERE - https://www.howtogeek.com/730243/what-are-bash-dictionaries-on-linux-and-how-do-you-use-them/
+# declare -A LOG_LEVEL=(
+# [FATAL]=(0 "$(tput setaf 1)FATAL$(tput sgr0)")
+# [ERROR]=(1 "$(tput setaf 1)ERROR$(tput sgr0)")
+# [WARN]=(2 "$(tput setaf 5)WARN$(tput sgr0)")
+# [INFO]=(3 "$(tput setaf 2)INFO$(tput sgr0)")
+# [DEBUG]=(4 "$(tput setaf 4)DEBUG$(tput sgr0)")
+# [TRACE]=(5 "$(tput setaf 0)TRACE$(tput sgr0)")
+# )
+
+# check/test set level is contain inside dir
+for key in "${!LOG_LEVEL[@]}"; 
+do 
+echo "KEY => $key";
+#echo "LOG_LEVEL => ${LOG_LEVEL[0]}";
+echo "LOG_LEVEL => ${LOG_LEVEL[0]}";
+if [[ $key =~ ${LOG_LEVEL[0]} ]]
+	echo "match"
+then 
+	echo "not match"
+fi
+done
 
 # LOG_LEVEL_FATAL=0
 # LOG_LEVEL_ERROR=1
@@ -48,7 +74,6 @@ LOG_FILE="script.log"
 function log() {
 
 	if [ "$2" ]; then
-
 	echo "$2";
 	fi
 
