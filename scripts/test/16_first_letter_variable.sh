@@ -142,6 +142,7 @@ local caller="${FUNCNAME[1]}"
 	# if [ ${#1} -eq 1 ]; then
 	# SCRIPT_NAME=$(/usr/bin/basename "${BASH_SOURCE[@]}") || exit 100
 
+	
 	if [ "$HIDE_LOG" ]; then
 		echo -e "[$TAG] $*" >>$LOG_FILE
 	else

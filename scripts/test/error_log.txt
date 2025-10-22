@@ -12,3 +12,5 @@
 /home/trapapa/workspace_codium/rust_init_project/scripts/test/16_first_letter_variable.sh: line 234: type: foo: not found
 /home/trapapa/workspace_codium/rust_init_project/scripts/test/16_first_letter_variable.sh: line 234: type: foo: not found
 /home/trapapa/workspace_codium/rust_init_project/scripts/test/16_first_letter_variable.sh: line 234: type: foo: not found
+/home/trapapa/workspace_codium/rust_init_project/scripts/test/16_first_letter_variable.sh: line 238: type: foo: not found
+/home/trapapa/workspace_codium/rust_init_project/scripts/test/16_first_letter_variable.sh: line 235: type: foo: not found
